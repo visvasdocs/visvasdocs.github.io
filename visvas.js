@@ -78,7 +78,7 @@ function assignShlokas(nShlokas, nStart, nEnd, curatedLines, shlokamName) {
 	var counter = nStart;
 	var nPending = 0;
 	
-	for (let i = 1; i <= totalPeople; i++) {		
+	for (let i = 1; i <= totalPeople; i++) {
 		nResultant = nPending + perpersonShlokasDecimal;
 		nTotalShlokas = Math.floor(nResultant);
 		nPending = nResultant - nTotalShlokas;
@@ -119,7 +119,7 @@ function assignDhyaanam(peopleForDhyanam, nStart, curatedLines) {
 function loadPeople() {
 	var objNames = document.getElementById('names'); 
 	text = '';
-	for (let i = 1; i <= 40; i++) {
+	for (let i = 1; i <= 30; i++) {
 		text += i + 'person' + '\n'
 	}
 	objNames.value =  text
@@ -182,4 +182,27 @@ function downloadCSV() {
     //provide the name for the CSV file to be downloaded
     hiddenElement.download = 'VSN_Allocations.csv';
     hiddenElement.click();
+}
+function randomizeNames() {
+	var txtNames = document.getElementById('names').value;
+	var objRandomnames = document.getElementById('randomnames');
+	
+	var splittedLines = txtNames.split('\n');
+	var curatedLines = [];
+	for (let i = 0; i < splittedLines.length; i++) {
+		if (splittedLines[i].trim()  != "") {
+			curatedLines.push(splittedLines[i].trim());
+		}
+	}
+	if (curatedLines.length == 0) {
+		alert('There are no names to randomize!');
+		return;
+	}
+	shuffle(curatedLines);
+	var text = '';
+	for (let i = 0; i < curatedLines.length; i++) {
+		text += curatedLines[i] + '\n';
+	}
+	console.log(text);
+	objRandomnames.value = text;
 }
