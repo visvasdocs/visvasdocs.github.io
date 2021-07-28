@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>VISVAS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
+    .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+    }
+    
+    /* Remove the jumbotron's default bottom margin */ 
+     .jumbotron {
+      margin-bottom: 0;
+	  background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.9) 100%), url("Venkateswara.jpg");
+	  background-size: cover;
+	  height: 100%;
+    }
+   
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+	
+	body {
+	  font-family: "Trebuchet MS", Verdana, sans-serif;
+	}
+  </style>
+  <script type = "text/javascript" src="visvas.js?v=11"></script>  
+</head>
+<body onload="loadPeople()">
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>VISVAS Document Base</h1>      
+    <p>Om Namo Narayana!</p>
+  </div>
+</div>
+
+<nav class="navbar navbar-light" style="background-color: lightgreen;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="background-color: teal;">
+        <span class="icon-bar" style="background-color: black;"></span>
+        <span class="icon-bar" style="background-color: black;"></span>
+        <span class="icon-bar" style="background-color: black;"></span>
+      </button>
+      <a class="navbar-brand" href="#">VISVAS</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="index.html">Documents</a></li>
+        <li><a href="visvas_lalitha.html">Shri Lalitha</a></li>
+		<li><a href="visvas_lakshmi.html">Shri Lakhsmi</a></li>
+        <li><a href="#">Upcoming Batches</a></li>
+        <li><a href="visvas2.html">Attendance</a></li>
+		<li><a href="visvasallocate.html">Allocate VSN</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://api.whatsapp.com/send?phone=919620552013"><span class="glyphicon glyphicon-phone"></span> Contact us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!===============================MAIN==================================>
+
+<div class="container">
+<div class="row">
+	<div class="col-sm-5">
+	  <label for="names" class="form-label">Enter Names</label>
+	  <button type="button" accesskey="c" class="btn btn-success" style="margin: 5px 0px;" onclick = "clearNames()">Clear</button>
+	  <textarea class="form-control" id="names" rows="25" style="font-family: Courier">persons</textarea>
+	</div>
+	<div class="col-sm-2" style="margin-top: auto;">
+		<div class="row">
+			<button type="button" accesskey="a" class="btn btn-success" style="margin: 10px 15px;" onclick = "allocate(false)">Allocate</button>
+			<button type="button" class="btn btn-success" style="margin: 10px 15px;" onclick = "allocate(true)">Allocate Randomly</button>
+		</div>
+	</div>
+	<div class="col-sm-5">
+	  <label for="allocation" class="form-label">Allocation</label>
+	  <textarea class="form-control" id="allocation" rows="25" style="font-family: Courier"></textarea>
+	  <div class="row"> <button type="button" class="btn btn-success btn-lg" style="margin: 10px 15px;" onclick = "copyToClipboard('allocation')">Copy Now</button> </div>
+	</div>
+</div>
+<br>
+<br>
+</div>
+
+<!===============================MAIN==================================>
+
+<footer class="container-fluid text-center">
+  <p>Copyright</p>  
+  <form class="form-inline">This is purely for educational purposes.
+  </form>
+</footer>
+
+</body>
+</html>
