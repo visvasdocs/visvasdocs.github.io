@@ -33,7 +33,7 @@
 	  font-family: "Trebuchet MS", Verdana, sans-serif;
 	}
   </style>
-  <script type = "text/javascript" src="visvas.js?v=14"></script>  
+  <script type = "text/javascript" src="visvas.js?v=11"></script>
 </head>
 <body onload="loadPeople()">
 
@@ -89,7 +89,10 @@
 	<div class="col-sm-5">
 	  <label for="allocation" class="form-label">Allocation</label>
 	  <textarea class="form-control" id="allocation" rows="25" style="font-family: Courier"></textarea>
-	  <div class="row"> <button type="button" class="btn btn-success btn-lg" style="margin: 10px 15px;" onclick = "copyToClipboard('allocation')">Copy Now</button> </div>
+	  <div class="row"> 
+		  <button type="button" class="btn btn-success btn-lg" style="margin: 10px 15px;" onclick = "copyToClipboard('allocation')">Copy Now</button> 
+		  <button type="button" class="btn btn-success btn-lg" style="margin: 10px 15px;" onclick = "downloadCSV()">Download CSV</button> 
+	  </div>
 	</div>
 </div>
 <br>
