@@ -34,7 +34,7 @@ function allocate(isShuffle) {
 	var peopleForPhalashruti = Math.ceil(33 / perpersonApprox);
 	peopleForShlokas = totalDevotees - (peopleForPhalashruti + peopleForPoorvaangam)
 	
-	txtPledgePrayer = 'Starting prayer: ' + '\n' + 'Pledge: ' + '\n\n';
+	txtPledgePrayer = 'Starting Prayer: ' + '\n' + 'Pledge: ' + '\n\n';
 	//===================================================================================================
 	nStart = devoteeCounter;  nEnd = devoteeCounter + peopleForPoorvaangam; devoteeCounter = nEnd;
 	txtPoorvangam = assignShlokas(22, nStart, nEnd, curatedLines, 'Poorvangam');
