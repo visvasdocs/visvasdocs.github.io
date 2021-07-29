@@ -1,6 +1,7 @@
 var strCsv = '';
+var curatedLinesRolled  = [];
 
-function allocate(isShuffle) {
+function allocate(strStyle) {
 	strCsv = 'Shlokam,Start,End,Count,Devotee Name' + '\n\n';
 	var txtNames = document.getElementById('names').value;
 	var objallocation = document.getElementById('allocation'); 
@@ -19,7 +20,11 @@ function allocate(isShuffle) {
 		return;
 	}
 	//Randomize
-	if(isShuffle) shuffle(curatedLines);
+	if(strStyle == 'random') shuffle(curatedLines);
+	if(strStyle == 'roll') {
+		if (curatedLinesRolled.length == 0) { console.log('no rolled'); rollNames(curatedLines, true); }
+		else { console.log(curatedLinesRolled); rollNames(curatedLinesRolled, true); curatedLines = Array.from(curatedLinesRolled); }
+	}
 	
 	if (curatedLines.length < 20) {
 		curatedLines = makeItTwenty(curatedLines);
@@ -117,12 +122,16 @@ function assignDhyaanam(peopleForDhyanam, nStart, curatedLines) {
 }
 
 function loadPeople() {
-	var objNames = document.getElementById('names'); 
-	text = '';
-	for (let i = 1; i <= 30; i++) {
-		text += i + 'person' + '\n'
-	}
-	objNames.value =  text
+	var objNames = document.getElementById('names');
+	if(window.localStorage.getItem("vsn-names") != '') 
+		objNames.value = window.localStorage.getItem("vsn-names");
+	else {
+		text = '';
+		for (let i = 1; i <= 22; i++) {
+			text += i + 'person' + '\n'
+		}
+		objNames.value =  text
+	}	
 }
 
 function makeItTwenty(curatedLines) {
@@ -149,7 +158,7 @@ function fillDahses25(word) {
 }
 
 function shuffle(array) {
-  var currentIndex = array.length,  randomIndex;
+  var currentIndex = array.length, randomIndex;
   // While there remain elements to shuffle...
   while (0 !== currentIndex) {
     // Pick a remaining element...
@@ -160,6 +169,13 @@ function shuffle(array) {
       array[randomIndex], array[currentIndex]];
   }
   return array;
+}
+function rollNames(arr, reverse) {
+  if (reverse) arr.unshift(arr.pop());
+  else arr.push(arr.shift());
+  
+  curatedLinesRolled = Array.from(arr);
+  return arr;
 }
 
 function copyToClipboard(object) {
@@ -183,7 +199,7 @@ function downloadCSV() {
     hiddenElement.download = 'VSN_Allocations.csv';
     hiddenElement.click();
 }
-function randomizeNames() {
+function operateNames(strDesign) {
 	var txtNames = document.getElementById('names').value;
 	var objRandomnames = document.getElementById('randomnames');
 	
@@ -200,9 +216,10 @@ function randomizeNames() {
 	}
 	shuffle(curatedLines);
 	var text = '';
-	for (let i = 0; i < curatedLines.length; i++) {
-		text += curatedLines[i] + '\n';
-	}
-	console.log(text);
+	for (let i = 0; i < curatedLines.length; i++) { text += curatedLines[i] + '\n'; }
 	objRandomnames.value = text;
+}
+
+function tempSave() {
+	window.localStorage.setItem("vsn-names", document.getElementById('names').value);
 }
