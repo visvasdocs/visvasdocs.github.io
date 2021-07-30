@@ -80,7 +80,7 @@
 	  <label for="names" class="form-label">Enter Names</label>
 	  <div class="row"> 
 		  <button type="button" accesskey="c" class="btn btn-danger" style="margin: 10px 5px 5px 10px;" onclick = "clearNames()">Clear</button>
-		  <button type="button" class="btn btn-danger" style="margin: 10px 5px 5px 10px;" onclick = "tempSave()">Temp Save</button>
+		  <button type="button" class="btn btn-danger" style="margin: 10px 5px 5px 10px;" onclick = "tempSave()"><span class="glyphicon glyphicon-floppy-disk"></span> Temp Save</button>
 	  </div>
 	  <textarea class="form-control" id="names" rows="15" style="font-family: Courier">persons</textarea>
 	</div>
@@ -95,8 +95,8 @@
 	  <label for="allocation" class="form-label">Allocation</label>
 	  <textarea class="form-control" id="allocation" rows="15" style="font-family: Courier; background: #e6ebe7"></textarea>
 	  <div class="row"> 
-		  <button type="button" class="btn btn-success btn-lg" style="margin: 10px 5px 0px 10px;" onclick = "copyToClipboard('allocation')">Copy Allocations</button> 
-		  <button type="button" class="btn btn-success btn-lg" style="margin: 10px 5px 0px 10px;" onclick = "downloadCSV()">Download CSV/XL</button> 
+		  <button type="button" class="btn btn-success btn-md" style="margin: 10px 5px 0px 10px;" onclick = "copyToClipboard('allocation')"><span class="glyphicon glyphicon-copy"></span> Copy Allocations</button> 
+		  <button type="button" class="btn btn-success btn-md" style="margin: 10px 5px 0px 10px;" onclick = "downloadCSV()"><span class="glyphicon glyphicon-download-alt"></span> Download CSV/XL</button> 
 	  </div>
 	</div>
 	
@@ -108,7 +108,7 @@
 		<label for="randomnames" class="form-label">Randomized Names</label>
 		<textarea class="form-control" id="randomnames" rows="15" style="font-family: Courier; background: #e6ebe7"></textarea>
 	  <div class="row"> 
-		  <button type="button" class="btn btn-info btn-lg" style="margin: 10px 15px;" onclick = "copyToClipboard('randomnames')">Copy Names</button> 
+		  <button type="button" class="btn btn-info btn-md" style="margin: 10px 15px;" onclick = "copyToClipboard('randomnames')"><span class="glyphicon glyphicon-copy"></span> Copy Names</button> 
 	  </div>
 	</div>
 	

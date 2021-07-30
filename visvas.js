@@ -42,7 +42,7 @@ function allocate(strStyle) {
 	var peopleForPhalashruti = Math.ceil(33 / perpersonApprox);
 	peopleForShlokas = totalDevotees - (peopleForPhalashruti + peopleForPoorvaangam)
 	
-	txtPledgePrayer = 'Starting Prayer: ' + '\n' + 'Pledge: ' + '\n\n';
+	txtPledgePrayer = '*Om Namo Narayana* \n' + 'Starting Prayer: ' + '\n' + 'Pledge: ' + '\n\n';
 	strCsv = strCsv + 'Starting Prayer: ' + '\n' + 'Pledge: ' + '\n\n';
 	//===================================================================================================
 	nStart = devoteeCounter;  nEnd = devoteeCounter + peopleForPoorvaangam; devoteeCounter = nEnd;
