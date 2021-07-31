@@ -6,8 +6,9 @@ function allocate(strStyle) {
 	var txtNames = document.getElementById('names').value;
 	var objallocation = document.getElementById('allocation'); 
 	var text = '';
+	var isRemovedVISVAS = false;
 	
-	//Devotees 
+	//Names - remove spaces and new lines
 	var splittedLines = txtNames.split('\n');
 	var curatedLines = [];
 	for (let i = 0; i < splittedLines.length; i++) {
@@ -19,18 +20,26 @@ function allocate(strStyle) {
 		alert('There are no people to allocate!');
 		return;
 	}
-	//Randomize
+	if (curatedLines[0] == 'VISVAS') { 
+		curatedLines = removeVISVAS(curatedLines);
+		isRemovedVISVAS = true;
+	}
+	
+	//Randomize / Making big / Rolling
 	if(strStyle == 'random') shuffle(curatedLines);
 	if(strStyle == 'roll') {
 		if (curatedLinesRolled.length == 0) { console.log('no rolled'); rollNames(curatedLines, true); }
 		else { console.log(curatedLinesRolled); rollNames(curatedLinesRolled, true); curatedLines = Array.from(curatedLinesRolled); }
-	}
-	
+	}	
 	if (curatedLines.length < 20) {
 		curatedLines = makeItTwenty(curatedLines);
 		peopleForDhyanam = 2;
 	} else peopleForDhyanam = 3;
-
+	if(isRemovedVISVAS) { curatedLines = addVISVAS(curatedLines); }
+	
+	//==========================================================================================
+	
+	//Start Processing
 	var devoteeCounter = 0;
 	
 	var total = 22 + 108 + 33;
@@ -222,4 +231,21 @@ function operateNames(strDesign) {
 
 function tempSave() {
 	window.localStorage.setItem("vsn-names", document.getElementById('names').value);
+}
+
+function removeVISVAS(curatedLines) {
+	var curatedLinesNew = [];
+	for (i = 1; i < curatedLines.length; i++) {
+		curatedLinesNew.push(curatedLines[i].trim());
+	}
+	return curatedLinesNew;
+}
+
+function addVISVAS(curatedLines) {
+	var curatedLinesNew = [];
+	curatedLinesNew[0] = 'VISVAS';
+	for (i = 1; i < curatedLines.length; i++) {
+		curatedLinesNew.push(curatedLines[i].trim());
+	}
+	return curatedLinesNew;
 }
