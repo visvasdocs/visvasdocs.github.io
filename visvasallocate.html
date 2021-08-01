@@ -5,34 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <style>
-    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
-    .navbar {
-      margin-bottom: 50px;
-      border-radius: 0;
-    }
-    
-    /* Remove the jumbotron's default bottom margin */ 
-     .jumbotron {
-      margin-bottom: 0;
-	  background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.9) 100%), url("Venkateswara.jpg");
-	  background-size: cover;
-	  height: 100%;
-    }
-   
-    /* Add a gray background color and some padding to the footer */
-    footer {
-      background-color: #f2f2f2;
-      padding: 25px;
-    }
-	
-	body {
-	  font-family: "Trebuchet MS", Verdana, sans-serif;
-	}
-  </style>
+  
+  <link rel="stylesheet" href="visvas.css">
   <script type = "text/javascript" src="visvas.js?v=11"></script>
 </head>
 <body onload="loadPeople()">
@@ -44,7 +20,7 @@
   </div>
 </div>
 
-<nav class="navbar navbar-light" style="background-color: lightgreen;">
+<nav class="navbar navbar-light">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="background-color: teal;">
@@ -56,20 +32,27 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="#">Home</a></li>
         <li><a href="index.html">Documents</a></li>
         <li><a href="visvas_lalitha.html">Shri Lalitha</a></li>
 		<li><a href="visvas_lakshmi.html">Shri Lakhsmi</a></li>
         <li><a href="#">Upcoming Batches</a></li>
         <li><a href="visvas2.html">Attendance</a></li>
 		<li><a href="visvasallocate.html">Allocate VSN</a></li>
+		<li class="dropdown">
+		   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Others <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="whatsapp.html">WhatsApp Share</a></li>
+            <li><a href="#">Change Ownership</a></li>
+          </ul>
+		</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="https://api.whatsapp.com/send?phone=919620552013"><span class="glyphicon glyphicon-phone"></span> Contact us</a></li>
+        <li><a href="https://api.whatsapp.com/send?phone=919620552013&text=Hi Udhay "><span class="glyphicon glyphicon-phone"></span> Contact us</a></li>
       </ul>
     </div>
   </div>
 </nav>
+
 
 <!===============================MAIN==================================>
 
