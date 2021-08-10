@@ -244,7 +244,7 @@ function removeVISVAS(curatedLines) {
 function addVISVAS(curatedLines) {
 	var curatedLinesNew = [];
 	curatedLinesNew[0] = 'VISVAS';
-	for (i = 1; i < curatedLines.length; i++) {
+	for (i = 0; i < curatedLines.length; i++) {
 		curatedLinesNew.push(curatedLines[i].trim());
 	}
 	return curatedLinesNew;
