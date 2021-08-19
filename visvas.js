@@ -20,7 +20,7 @@ function allocate(strStyle) {
 		alert('There are no people to allocate!');
 		return;
 	}
-	if (curatedLines[0] == 'VISVAS') { 
+	if (curatedLines[0].toUpperCase() == 'VISVAS') { 
 		curatedLines = removeVISVAS(curatedLines);
 		isRemovedVISVAS = true;
 	}
