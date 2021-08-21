@@ -2,7 +2,7 @@ var strCsv = '';
 var curatedLinesRolled  = [];
 
 function allocate(strStyle) {
-	strCsv = 'Shlokam,Start,End,Count,Devotee Name' + '\n\n';
+	strCsv = 'Shlokam,Start,End,Count,Devotee Name,Backup Chanter' + '\n\n';
 	var txtNames = document.getElementById('names').value;
 	var objallocation = document.getElementById('allocation'); 
 	var text = '';
@@ -51,8 +51,10 @@ function allocate(strStyle) {
 	var peopleForPhalashruti = Math.ceil(33 / perpersonApprox);
 	peopleForShlokas = totalDevotees - (peopleForPhalashruti + peopleForPoorvaangam)
 	
-	txtPledgePrayer = '*Om Namo Narayana* \n' + 'Starting Prayer: ' + '\n' + 'Pledge: ' + '\n\n';
-	strCsv = strCsv + 'Starting Prayer: ' + '\n' + 'Pledge: ' + '\n\n';
+	var strStartingPrayerPerson = getRandomName(curatedLines);
+	var strPledgePerson = getRandomName(curatedLines);
+	txtPledgePrayer = '*Om Namo Narayana* \n' + 'Starting Prayer: ' + strStartingPrayerPerson + '\n' + 'Pledge: ' + strPledgePerson + '\n\n';
+	strCsv = strCsv + 'Starting Prayer: ,,,,' + strStartingPrayerPerson + '\n' + 'Pledge: ,,,,' + strPledgePerson + '\n\n';
 	//===================================================================================================
 	nStart = devoteeCounter;  nEnd = devoteeCounter + peopleForPoorvaangam; devoteeCounter = nEnd;
 	txtPoorvangam = assignShlokas(22, nStart, nEnd, curatedLines, 'Poorvangam');
@@ -75,8 +77,9 @@ function allocate(strStyle) {
 	strCsv = strCsv + '\n';
 	
 	//===================================================================================================
-	txtEndingPrayer = 'Ending Prayer: ' + '\n';
-	strCsv = strCsv + 'Ending Prayer: ' + '\n';
+	var strEndingPrayerPerson = getRandomName(curatedLines);
+	txtEndingPrayer = 'Ending Prayer: ' + strEndingPrayerPerson + '\n';
+	strCsv = strCsv + 'Ending Prayer: ,,,,' + strEndingPrayerPerson + '\n';
 	
 	objallocation.value = txtPledgePrayer + txtPoorvangam + '\n' + txtNyasaa + '\n' + txtDhyaaanam + '\n' + txtShlokam + '\n' + txtPhalashruti + '\n' + txtEndingPrayer;
 }
@@ -248,4 +251,9 @@ function addVISVAS(curatedLines) {
 		curatedLinesNew.push(curatedLines[i].trim());
 	}
 	return curatedLinesNew;
+}
+
+function getRandomName(curatedLines) {
+	var randNumber = Math.floor(Math.random() * (curatedLines.length + 1));
+	return curatedLines[randNumber];
 }
