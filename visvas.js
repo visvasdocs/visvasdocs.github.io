@@ -257,3 +257,13 @@ function getRandomName(curatedLines) {
 	var randNumber = Math.floor(Math.random() * (curatedLines.length + 1));
 	return curatedLines[randNumber];
 }
+
+function sendInWhatsApp() {
+	var wanumber = document.getElementById('wanumber').value;
+	console.log(wanumber);
+	var wanumber = wanumber.replace(/[^\d]/g, '');
+	console.log(wanumber);
+	if(wanumber.length == 10 ) {  location.href = "https://api.whatsapp.com/send?phone=91" + wanumber + "&text=Here is the link to register for upcoming A-Batch: https://forms.gle/Fb7XLQ45GyYNGwcQ6";  }
+	else { alert('Please enter 10 digit phone number without +91 prefix.'); }
+	
+}

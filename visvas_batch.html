@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="visvas.css">
   <script type = "text/javascript" src="visvas.js?v=11"></script>
 </head>
-<body onload="loadPeople()">
+<body>
 
 <div class="jumbotron">
   <div class="container text-center">
@@ -75,7 +75,9 @@
 
 				<br><br>Based on the overwhelming of responses, we take the registrations up to 20th of every month for the batches commencing in the first week of subsequent month. People who have registered after 20th will be added to batch of theforthcoming batch. 
 				<br><br>
-				<a href="https://api.whatsapp.com/send?phone=919620552013&text=Here is the link to register for A-Batch: https://forms.gle/Fb7XLQ45GyYNGwcQ6"><span class="glyphicon glyphicon-envelope"></span> Send link in WhatsApp</a>
+				<input type="text" class="form-control" id="wanumber"  style="font-family: Courier" placeholder="WhatsApp Number e.g. 9768918923. No spaces." required></input>
+				<button type="button" class="btn btn-info btn-md" style="margin: 10px 0px;" onclick = "sendInWhatsApp()"><span class="glyphicon glyphicon-phone"></span> WhatsApp the link</button> 
+				
 		</td>
 		</tr>
 	</tbody>
