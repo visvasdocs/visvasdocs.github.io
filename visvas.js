@@ -2,7 +2,11 @@ var strCsv = '';
 var curatedLinesRolled  = [];
 
 function allocate(strStyle) {
-	strCsv = 'Shlokam,Start,End,Count,Devotee Name,Backup Chanter' + '\n\n';
+	//Save all values
+	tempSave();
+	
+	strCsv = 'Batch Number,' + window.localStorage.getItem("vsn-batchnumber") + ',,Date,'+ window.localStorage.getItem("vsn-satsangdate") + '\n\n';
+	strCsv = strCsv + 'Shlokam,Start,End,Count,Devotee Name,Backup Chanter' + '\n\n';
 	var txtNames = document.getElementById('names').value;
 	var objallocation = document.getElementById('allocation'); 
 	var text = '';
@@ -53,7 +57,11 @@ function allocate(strStyle) {
 	
 	var strStartingPrayerPerson = getRandomName(curatedLines);
 	var strPledgePerson = getRandomName(curatedLines);
-	txtPledgePrayer = '*Om Namo Narayana* \n' + 'Starting Prayer: ' + strStartingPrayerPerson + '\n' + 'Pledge: ' + strPledgePerson + '\n\n';
+	
+	txtOmNamo = '*Om Namo Narayana* \n';
+	txtDashes = '--------------------------------------------\n';
+	txtBatchDate = 'Batch Number: ' + window.localStorage.getItem("vsn-batchnumber") + '  [Satsang Date: ' + window.localStorage.getItem("vsn-satsangdate") + ']\n';
+	txtPledgePrayer = 'Starting Prayer: ' + strStartingPrayerPerson + '\n' + 'Pledge: ' + strPledgePerson + '\n\n';
 	strCsv = strCsv + 'Starting Prayer: ,,,,' + strStartingPrayerPerson + '\n' + 'Pledge: ,,,,' + strPledgePerson + '\n\n';
 	//===================================================================================================
 	nStart = devoteeCounter;  nEnd = devoteeCounter + peopleForPoorvaangam; devoteeCounter = nEnd;
@@ -81,7 +89,7 @@ function allocate(strStyle) {
 	txtEndingPrayer = 'Ending Prayer: ' + strEndingPrayerPerson + '\n';
 	strCsv = strCsv + 'Ending Prayer: ,,,,' + strEndingPrayerPerson + '\n';
 	
-	objallocation.value = txtPledgePrayer + txtPoorvangam + '\n' + txtNyasaa + '\n' + txtDhyaaanam + '\n' + txtShlokam + '\n' + txtPhalashruti + '\n' + txtEndingPrayer;
+	objallocation.value = txtOmNamo + txtDashes + txtBatchDate + txtDashes + txtPledgePrayer + txtPoorvangam + '\n' + txtNyasaa + '\n' + txtDhyaaanam + '\n' + txtShlokam + '\n' + txtPhalashruti + '\n' + txtEndingPrayer;
 }
 
 function assignShlokas(nShlokas, nStart, nEnd, curatedLines, shlokamName) {
@@ -134,6 +142,9 @@ function assignDhyaanam(peopleForDhyanam, nStart, curatedLines) {
 }
 
 function loadPeople() {
+	if(window.localStorage.getItem("vsn-batchnumber") != '')  document.getElementById('batchnumber').value = window.localStorage.getItem("vsn-batchnumber");
+	if(window.localStorage.getItem("vsn-satsangdate") != '')  document.getElementById('satsangdate').value = window.localStorage.getItem("vsn-satsangdate");
+	
 	var objNames = document.getElementById('names');
 	if(window.localStorage.getItem("vsn-names") != '') 
 		objNames.value = window.localStorage.getItem("vsn-names");
@@ -234,6 +245,8 @@ function operateNames(strDesign) {
 
 function tempSave() {
 	window.localStorage.setItem("vsn-names", document.getElementById('names').value);
+	window.localStorage.setItem("vsn-batchnumber", document.getElementById('batchnumber').value);
+	window.localStorage.setItem("vsn-satsangdate", document.getElementById('satsangdate').value);
 }
 
 function removeVISVAS(curatedLines) {
