@@ -40,7 +40,8 @@ function nextScramble() {
 	}   while ((newQuoteIndex == oldIndex));
 	oldIndex = newQuoteIndex;
 	
-	return "Scarmbled: " + shuffle(words[newQuoteIndex].word);
+	var strword = document.getElementById("word");
+	strword.innerHTML = "Scarmbled: " + shuffle(words[newQuoteIndex].word);
 }
 
 function showAnswer() {
