@@ -31,6 +31,18 @@ function nextQuote() {
 	
 }
 
+function nextScramble() {
+	var answer = document.getElementById("answer");
+	answer.innerHTML = "";
+	
+	do { 
+		var newQuoteIndex = Math.floor(Math.random() * words.length);
+	}   while ((newQuoteIndex == oldIndex));
+	oldIndex = newQuoteIndex;
+	
+	return "Scarmbled: " + shuffle(words[newQuoteIndex].word);
+}
+
 function showAnswer() {
 	var answer = document.getElementById("answer");
 	answer.innerHTML = words[oldIndex].word + "<br>" + words[oldIndex].sentence + '<br><br><i>' + words[oldIndex].meaning + "</i>";
