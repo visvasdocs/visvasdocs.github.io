@@ -44,6 +44,19 @@ function nextScramble() {
 	strword.innerHTML = "Scarmbled: " + shuffle(words[newQuoteIndex].word);
 }
 
+function nextMeaning() {
+	var answer = document.getElementById("answer");
+	answer.innerHTML = "";
+	
+	do { 
+		var newQuoteIndex = Math.floor(Math.random() * words.length);
+	}   while ((newQuoteIndex == oldIndex));
+	oldIndex = newQuoteIndex;
+	
+	var strword = document.getElementById("word");
+	strword.innerHTML = "Get the word: <br>" + words[newQuoteIndex].meaning;
+}
+
 function showAnswer() {
 	var answer = document.getElementById("answer");
 	answer.innerHTML = words[oldIndex].word + "<br>" + words[oldIndex].sentence + '<br><br><i>' + words[oldIndex].meaning + "</i>";
