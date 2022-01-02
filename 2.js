@@ -6,9 +6,6 @@ function loadWords() {
 	nextQuote();
 }
 
-function nextQuestion() {
-	nextQuote();
-}
 function nextQuote() {
 	randomize();
 	var strword = document.getElementById("word");
