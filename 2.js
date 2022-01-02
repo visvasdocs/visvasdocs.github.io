@@ -31,7 +31,7 @@ function randomize() {
 
 function showAnswer() {
 	var answer = document.getElementById("answer");
-	shlokas[newQuoteIndex].verse.replace("
+	//shlokas[newQuoteIndex].verse.replace("
 	var strAnswer = shlokas[newQuoteIndex].chapter_number + '.' + shlokas[newQuoteIndex].shloka_number + "<br/><br>" + 
 		shlokas[newQuoteIndex].verse + "<br>";
 	answer.innerHTML = strAnswer;
