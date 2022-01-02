@@ -15,15 +15,21 @@
 <body onload="loadWords()">
 <div class="container">
 
-	<div class="row"><label id="word">Word</label></div>
+	<h1 class="display-1 text-center">Bhagwad Gita Quiz</h1>
 
+	<div class="row"><h1 class="display-1"><label id="word">Word</label></h1></div>
 	<div class="row">
 		<button type="button" accesskey="a" class="btn btn-success" style="margin: 10px 5px 0px 0px;" onclick = "showAnswer()">Show Answer</button>
 	</div>
+	
+	<!--ANSWER -->
 	<div class="row"><h1 class="display-1"><label id="answer">Answer</label></h1></div>
 	<br />
 	<div class="row">
 		<button type="button" accesskey="n" class="btn btn-success" style="margin: 10px 5px 0px 0px;" onclick = "nextQuestion()">Next</button>
+	</div>
+	<div class="row">
+		<button type="button" accesskey="p" class="btn btn-warning" style="margin: 10px 5px 0px 0px;" onclick = "nextParagraph()">Next Paragraph</button>
 	</div>
 
 

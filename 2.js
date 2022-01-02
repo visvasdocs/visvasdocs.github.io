@@ -9,19 +9,28 @@ function loadWords() {
 function nextQuestion() {
 	nextQuote();
 }
-
 function nextQuote() {
+	randomize();
+	var strword = document.getElementById("word");
+	strword.innerHTML = "Shloka: " + shlokas[newQuoteIndex].chapter_number + '.' + shlokas[newQuoteIndex].shloka_number;
+}
+function nextParagraph() {
+	randomize();
+	var strword = document.getElementById("word");
+	strQuestionArray = shlokas[newQuoteIndex].verse.split(",");
+	strQuestion = strQuestionArray[Math.floor((Math.random()*strQuestionArray.length))];
+	strword.innerHTML = strQuestion;
+}
+
+function randomize() {
 	var answer = document.getElementById("answer");
 	answer.innerHTML = "";
-	
 	do{
 		newQuoteIndex = Math.floor(Math.random() * shlokas.length);
 	} while ((newQuoteIndex == oldIndex));
 	oldIndex = newQuoteIndex;
-	
-	var strword = document.getElementById("word");
-	strword.innerHTML = "Shloka: " + shlokas[newQuoteIndex].chapter_number + '.' + shlokas[newQuoteIndex].shloka_number;
 }
+
 
 function showAnswer() {
 	var answer = document.getElementById("answer");
