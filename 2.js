@@ -22,7 +22,7 @@ function nextParagraph() {
 }
 function showAll() {
 	var bgtable = document.getElementById("bgtable");
-	var strFullTableContents = '<table class="table table-striped"><thead><tr><th>#</th><th>Shlokam</th></tr></thead><tbody>';
+	var strFullTableContents = '<table class="table table-striped  text-black"><thead><tr><th>#</th><th>Shlokam</th></tr></thead><tbody>';
 	
 	shlokas.forEach(function(obj) { 
 		console.log(obj.id);
