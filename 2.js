@@ -20,8 +20,20 @@ function nextParagraph() {
 	strQuestion = strQuestionArray[Math.floor((Math.random()*strQuestionArray.length))];
 	strword.innerHTML = strQuestion;
 }
+function showAll() {
+	var bgtable = document.getElementById("bgtable");
+	var strFullTableContents = '<table class="table table-striped"><thead><tr><th>#</th><th>Shlokam</th></tr></thead><tbody>';
+	
+	shlokas.forEach(function(obj) { 
+		console.log(obj.id);
+		strFullTableContents = strFullTableContents + '<tr><td>' + obj.shloka_number + '</td><td>' + obj.verse + '</td></tr>';
+	});
+	strFullTableContents = strFullTableContents + '</tbody></table>';
+	
+	bgtable.innerHTML = strFullTableContents;
+}
 
-
+//JS: helper Functions
 function randomize() {
 	var answer = document.getElementById("answer");
 	answer.innerHTML = "";
