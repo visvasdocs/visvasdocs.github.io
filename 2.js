@@ -4,23 +4,27 @@ var shlokas;
 var shlokas_12, shlokas_15;
 
 function loadWords() {
-	shlokas = shlokas_15;
+	if(window.localStorage.getItem("bg-chapter") != '')  { document.getElementById('chapters').value = window.localStorage.getItem("bg-chapter") };
+	determineChapter()
 	nextQuote();
 }
 
 function nextQuote() {
+	determineChapter();
 	randomize();
 	var strword = document.getElementById("word");
-	strword.innerHTML = "Shloka: " + shlokas[newQuoteIndex].chapter_number + '.' + shlokas[newQuoteIndex].shloka_number;
+	strword.innerHTML = "Tell: " + shlokas[newQuoteIndex].chapter_number + '.' + shlokas[newQuoteIndex].shloka_number;
 }
 function nextParagraph() {
+	determineChapter();
 	randomize();
 	var strword = document.getElementById("word");
 	strQuestionArray = shlokas[newQuoteIndex].verse.split(",");
 	strQuestion = strQuestionArray[Math.floor((Math.random()*strQuestionArray.length))];
-	strword.innerHTML = strQuestion;
+	strword.innerHTML = 'Which one where?: ' + strQuestion;
 }
 function showAll() {
+	determineChapter();
 	var bgtable = document.getElementById("bgtable");
 	var strFullTableContents = '<table class="table table-striped  text-black"><thead><tr><th>#</th><th>Shlokam</th></tr></thead><tbody>';
 	
@@ -34,6 +38,12 @@ function showAll() {
 }
 
 //JS: helper Functions
+function determineChapter() {
+	var cmbChapter = document.getElementById("chapters");
+	if (cmbChapter.value == 12) shlokas = shlokas_12;
+	if (cmbChapter.value == 15) shlokas = shlokas_15;
+	window.localStorage.setItem("bg-chapter", cmbChapter.value);
+}
 function randomize() {
 	var answer = document.getElementById("answer");
 	answer.innerHTML = "";
