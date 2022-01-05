@@ -1,7 +1,7 @@
 var oldIndex;
 var newQuoteIndex;
 var shlokas;
-var shlokas_12, shlokas_15;
+var shlokas_12, shlokas_15, shlokas_16;
 
 function loadWords() {
 	if(window.localStorage.getItem("bg-chapter") != '')  { document.getElementById('chapters').value = window.localStorage.getItem("bg-chapter") };
@@ -42,6 +42,7 @@ function determineChapter() {
 	var cmbChapter = document.getElementById("chapters");
 	if (cmbChapter.value == 12) shlokas = shlokas_12;
 	if (cmbChapter.value == 15) shlokas = shlokas_15;
+	if (cmbChapter.value == 16) shlokas = shlokas_16;
 	window.localStorage.setItem("bg-chapter", cmbChapter.value);
 }
 function randomize() {
@@ -105,4 +106,32 @@ shlokas_12 = [
 {"verse": "सम: शत्रौ च मित्रे च , तथा मानापमानयो: ।, शीतोष्ण सुखदु:खेषु , सम: सङ्ग विवर्जित: ॥ १८ ॥ 18","chapter_number":12,"shloka_number": 18},
 {"verse": "तुल्य निन्दास्तु तिर्मौनी , सन्तुष्टो येन केनचित् ।, अनिकेत: स्थिरमति: , र्भक्तिमान्मे प्रियो नर: ॥ १९ ॥ 19","chapter_number":12,"shloka_number": 19},
 {"verse": "ये तु धर्माya मृतमिदं , यथोक्तं पर्युपासते । ,  श्रद्दधाना मत्परमा: , भक्तास्तेऽ तीव मे प्रिया: ॥ २० ॥ 20","chapter_number":12,"shloka_number": 20},
+];
+
+
+shlokas_16 = [
+{"verse": "श्रीभगवानुवाच । अभयं सत्त्वसंशुद्धि: , र्ज्ञानयोग व्यवस्थितिः । , दानं दमश्च यज्ञश्च , स्वाध्या यस्तप आर्जवम् ॥ १६-१॥ 16.1","chapter_number":16,"shloka_number": 1},
+{"verse": "Ahimsaa अहिंसा सत्य मक्रोध: , thyaaगः शान्तिर पैशुनम् । , दया भूतेष्व लोलुप्त्वं , मार्दवं ह्रीर चापलम् ॥ १६-२॥ 16.2","chapter_number":16,"shloka_number": 2},
+{"verse": "Thejah तेजः(h) क्षमा धृतिः शौचm , aद्रोहो नातिमानिता ।,  भवन्ति सम्पदं दैवीm , aभिजातस्य भारत ॥ १६-३॥ 16.3","chapter_number":16,"shloka_number": 3},
+{"verse": "dhambho  दम्भो दर्पोऽभिमानश्च , क्रोधः पारुष्यमेव च ।, अज्ञानं(agnaanam) चाभि जातस्य , पार्थ सम्पदमासुरीम् ॥ १६-४॥ 16.4","chapter_number":16,"shloka_number": 4},
+{"verse": "Dhaiveem दैवी सम्पद्वि मोक्षाय , निबन्धायासुरी मता ।, मा शुचः सम्पदं दैवीm , aभिजातोऽसि पाण्डव ॥ १६-५॥ 16.5","chapter_number":16,"shloka_number": 5},
+{"verse": "Dhwow द्वौ भूतसर्गौ लोकेऽस्मिn, दैव आसुर एव च ।,  दैवो विस्तरशः प्रोक्त: , आसुरं पार्थ मे शृणु ॥ १६-६॥ 16.6","chapter_number":16,"shloka_number": 6},
+{"verse": "Pravruthin  प्रवृत्तिं च निवृत्तिं च , जना न विदुरासुराः ।,  न शौचnनापि चाचार: , न सत्यं तेषु विद्यते ॥ १६-७॥ 16.7","chapter_number":16,"shloka_number": 7},
+{"verse": "Asathya असत्य मप्रतिष्ठं ते , जगदाहुर नीश्वरम् ।, अपरस्पर सम्भूतं , किमन्यत्काम हैतुकम् ॥ १६-८॥ 16.8","chapter_number":16,"shloka_number": 8},
+{"verse": "Yethaam एतां दृष्टिम वष्टभ्य , नष्टात्मानोऽल्प बुद्धयः ।, प्रभवन्त्युग्र कर्माणः , क्षयाय जगतोऽहिताः ॥ १६-९॥ 16.9","chapter_number":16,"shloka_number": 9},
+{"verse": "Kaama  काममाश्रित्य दुष्पूरं , दम्भमान मदान्विताः ।,  मोहाद्गृहीत्वा सद्ग्राहाn, प्रवर्तन्तेऽ शुचिव्रताः ॥ १६-१०॥ 16.10","chapter_number":16,"shloka_number": 10},
+{"verse": "Chinthaa चिन्ता मपरिमेयां च , प्रलयान्ता मुपाश्रिताः ।, कामोपभोग परमा: , एतावदिति निश्चिताः ॥ १६-११॥ 16.11","chapter_number":16,"shloka_number": 11},
+{"verse": "Aashaa  आशापाश शतैर्बद्धाः , कामक्रोध परायणाः ।, ईहन्ते कामभोगार्थm, aन्यायेनार्थ सञ्चयान् ॥ १६-१२॥ 16.12","chapter_number":16,"shloka_number": 12},
+{"verse": "Idhamadhya  इदमद्य मया लब्धm , eमं प्राप्स्ये मनोरथम् । , इदमस्तीद मपिमे , भविष्यति पुनर्धनम् ॥ १६-१३॥ 16.13","chapter_number":16,"shloka_number": 13},
+{"verse": "Asow  असौ मया हतः शत्रु: ,- हनिष्ये चापरानपि । , ईश्वरोऽहमहं भोगी , सिद्धोऽहं बलवान्सुखी ॥ १६-१४॥ 16.14","chapter_number":16,"shloka_number": 14},
+{"verse": "Aadyo  आढ्योऽभिजन वानस्मि , कोऽन्योऽस्ति सदृशो मया ।, यक्ष्ये दास्यामि मोदिष्ये , इत्यज्ञानवि मोहिताः ॥ १६-१५॥ 16.15","chapter_number":16,"shloka_number": 15},
+{"verse": "Aneka अनेकचित्त विभ्रान्ता: , मोहजालस मावृताः ।, प्रसक्ताः कामभोगेषु  ,पतन्ति नरकेऽशुचौ ॥ १६-१६॥ 16.16","chapter_number":16,"shloka_number": 16},
+{"verse": "Aathma आत्म सम्भाविताः स्तब्धा: , धनमान मदान्विताः । ,यजन्ते नामयज्ञैस्ते , दम्भेनावि धिपूर्वकम् ॥ १६-१७॥ 16.17","chapter_number":16,"shloka_number": 17},
+{"verse": "Ahankaram अहङ्कारं बलं दर्पं , कामं क्रोधं च संश्रिताः ।, मामात्म परदेहेषु , प्रद्विषन्तोऽभ्य सूयकाः ॥ १६-१८॥ 16.18","chapter_number":16,"shloka_number": 18},
+{"verse": "thaanaham तानहं द्विषतः क्रूराn , संसारेषु नराधमान् । , क्षिपाम्य जस्र मशुभाn , आसुरीष्वेव योनिषु ॥ १६-१९॥ 16.19","chapter_number":16,"shloka_number": 19},
+{"verse": "Aasureem आसुरीं योनिमापन्ना: , मूढा जन्मनि जन्मनि । , मामप्राप्यैव कौन्तेय , ततो यान्त्यधमां गतिम् ॥ १६-२०॥ 16.20","chapter_number":16,"shloka_number": 20},
+{"verse": "thrividham त्रिविधं नरकस्येदं , द्वारं नाशनमात्मनः ।,  कामः क्रोधस्तथा लोभ: , thaस्मादेतत्त्रयं त्यजेत् ॥ १६-२१॥ 16.21","chapter_number":16,"shloka_number": 21},
+{"verse": "Yethair  एतैर्विमुक्तः कौन्तेय , तमोद्वारै स्त्रिभिर्नरः । , आचरत्यात्मनः श्रेय: , thaतो याति परां गतिम् ॥ १६-२२॥ 16.22","chapter_number":16,"shloka_number": 22},
+{"verse": "Yash यः शास्त्रविधि , मुत्सृज्य वर्तते कामकारतः ।, न स सिद्धिम वाप्नोति , न सुखं न परां गतिम् ॥ १६-२३॥ 16.23","chapter_number":16,"shloka_number": 23},
+{"verse": "thasmaa तस्माच्छास्त्रं प्रमाणं ते , कार्याकार्यव्य वस्थितौ ।,  ज्ञात्वा शास्त्रविधानोक्तं , कर्म कर्तुमि हार्हसि ॥ १६-२४॥ 16.24","chapter_number":16,"shloka_number": 24},
 ];
