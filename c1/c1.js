@@ -64,16 +64,18 @@ function clear() {
 	document.getElementById('d').classList.remove('bg-danger');  document.getElementById('d').classList.remove('bg-success');
 }
 function showAnswer() {
+	//If no answer is selected
 	if(document.querySelector('input[name="options"]:checked') == null) {
 		alert('Select an answer to proceed further.');
 		return;
 	}
+	
 	strActualValue = document.querySelector('input[name="options"]:checked').value;
 	console.log(strActualValue);
 	strExpectedValue = questions[newQuoteIndex].answer;
-	document.getElementById("answer").innerHTML = questions[newQuoteIndex].answer;
-	//console.log(strExpectedValue + strActualValue);
+	document.getElementById("answer").innerHTML = 'Answer: ' + questions[newQuoteIndex].answer;
 	
+	//COLOR it accordingly
 	if(strActualValue != strExpectedValue) { document.getElementById(strActualValue).classList.add('bg-danger');  document.getElementById(strExpectedValue).classList.add('bg-success'); }
 	if(strActualValue == strExpectedValue) document.getElementById(strActualValue).classList.add('bg-success');
 }
