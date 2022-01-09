@@ -165,6 +165,7 @@ qbPhonetics = [
 
 qbBhagwadGita =  [
 
+
 {"question": "1. Why did Arjuna start trembling, when he saw the Kaurava army in full force at the beginning of the Kurukshetra war ?","option1":"a. He was thrilled, and eager for battle.","option2": "b. He started to develop a fever.","option3": "c. He was upset at the thought of fighting his family members.","option4": "d. He was scared that he might not be able to win against the seasoned warriors in the Kaurava army.","answer": "d"},
 {"question": "2. Arjuna's bow, the _______________ started slipping from his hand.","option1":"a. Sharnga","option2": "b. Kodanda","option3": "c. Gandiva","option4": "d. Pinaka","answer": "c"},
 {"question": "3. Arjuna's symptoms after viewing the Kaurava army, indicate the follwing mental condition :","option1":"a. Depression","option2": "b. Obsessive compulsive disorder","option3": "c. ADHD","option4": "d. Bipolar disorder","answer": "a"},
@@ -256,14 +257,15 @@ qbBhagwadGita =  [
 {"question": "89. Praanadah means one who gives ___________ to all.","option1":"a. boons","option2": "b. mukti","option3": "c. praana","option4": "d. birth","answer": "c"},
 {"question": "90. Mahaasvanaha means one who posesses a _________________.","option1":"a. huge serpent","option2": "b. deep breath","option3": "c. large weapon","option4": "d. thundering voice","answer": "d"},
 {"question": "91. Medhavee means ___________.","option1":"a. child of Medhas","option2": "b. devoid of ego","option3": "c. supremely intelligent","option4": "d. great cowherd","answer": "c"},
-{"question": "95. Satyamedhah means 'one whose ________________ never fails'","option1":"a. effort","option2": "b. aim","option3": "c. truth","option4": "d. intelligence","answer": "d"},
+{"question": "92. Dhanvee means one who has a mighty __________________.","option1":"a. bow","option2": "b. wealth","option3": "c. cow","option4": "d. weapon","answer": "a"},
+{"question": "93. Satyamedhah means 'one whose ________________ never fails'","option1":"a. effort","option2": "b. aim","option3": "c. truth","option4": "d. intelligence","answer": "d"},
 {"question": "94. Mahaabalah means one who has ______________ _.","option1":"a. supreme strength","option2": "b. supreme weapons","option3": "c. supreme wealth","option4": "d. Balarama","answer": "a"},
 {"question": "95. Vishwakarma means __________________________ of the world of objects.","option1":"a. observer","option2": "b. creator","option3": "c. influencer","option4": "d. designer","answer": "b"},
 {"question": "96. Vikramee means one who is full of ___________________.","option1":"a. prowess","option2": "b. vision","option3": "c. skill","option4": "d. strength","answer": "a"},
 {"question": "97. Akshobhyah means one with infinite ___________.","option1":"a. wealth","option2": "b. eyes","option3": "c. skill","option4": "d. patience","answer": "d"},
 {"question": "98. Amaanee means one who has no __________________.","option1":"a. darkness","option2": "b. pride","option3": "c. false vanity","option4": "d. disturbance","answer": "c"},
 {"question": "99. Avyaah means ________________________.","option1":"a. eternal","option2": "b. changeless","option3": "c. constant","option4": "d. enchanting","answer": "b"},
-{"question": "100. Chaturasrah means one who  _________________________ .","option1":"a. dispenses equal justice to all","option2": "b. lives in a four sided residence","option3": "c. who owns four worlds","option4": "d. who has four weapons","answer": "d"},
+{"question": "100. Chaturasrah means one who  _________________________ .","option1":"a. dispenses equal justice to all","option2": "b. lives in a four sided residence","option3": "c. who owns four worlds","option4": "d. who has four weapons","answer": "a"},
 
 
 
