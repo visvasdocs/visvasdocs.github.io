@@ -13,7 +13,7 @@
   <script type = "text/javascript" src="2.js?v=2"></script>
 </head>
 
-<body onload="loadWords()">
+<body onload="loadWords()" bgcolor="seashell">
 <div class="container">
 	<h1 class="text-center"><strong>Bhagwad Gita Quiz</strong></h1>
 
@@ -24,11 +24,11 @@
 	<div class="row">
 		<button type="button" accesskey="n" class="btn btn-success" style="margin: 10px 5px 0px 0px;" onclick = "nextQuote()">Next num Question</button>
 		<button type="button" accesskey="p" class="btn btn-success" style="margin: 10px 5px 0px 0px;" onclick = "nextParagraph()">Next Paragraph Ques</button>
-		<button type="button" accesskey="a" class="btn btn-warning" style="margin: 10px 5px 0px 0px;" onclick = "showAnswer()">Show Answer</button>
 	</div>
 	
 	<!--Display QUESTION here -->
 	<div class="row"><h1 class="display-6 text-danger"><label id="word">Word</label></h1></div>
+	<div class="row"><button type="button" accesskey="a" class="btn btn-warning" style="margin: 10px 5px 0px 0px;" onclick = "showAnswer()">Show Answer</button></div>
 	
 	<!--ANSWER -->
 	<blockquote><p class="h2" id="answer">Answer</p></blockquote>
