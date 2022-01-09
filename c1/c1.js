@@ -5,7 +5,8 @@ var shlokas_12, shlokas_15, shlokas_16;
 var questions;
 
 function loadWords() {
-	//if(window.localStorage.getItem("bg-chapter") != '')  { document.getElementById('chapters').value = window.localStorage.getItem("bg-chapter") };
+	if(window.localStorage.getItem("chapter") != '')  { document.getElementById('chapters').value = window.localStorage.getItem("chapter") };
+	if(window.localStorage.getItem("choice") != '')  { document.getElementById('choice').value = window.localStorage.getItem("choice") };
 	//determineChapter()
 	//questions = qbPhonetics;
 	nextQuote();
@@ -42,6 +43,9 @@ function determineChapter() {
 	if (cmbChapter.value == 1) questions = qbPhonetics;
 	if (cmbChapter.value == 2) questions = qbBhagwadGita;
 	window.localStorage.setItem("chapter", cmbChapter.value);
+	
+	var cmbChoice = document.getElementById("choice");
+	window.localStorage.setItem("choice", cmbChoice.value);
 }
 function determindNextQuestionNumber() {
 	var progressChoice = document.getElementById("choice").value;
