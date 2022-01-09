@@ -4,6 +4,7 @@ var shlokas;
 var shlokas_12, shlokas_15, shlokas_16;
 var questions;
 var nScore = 0;
+var blnScored = false;
 
 function loadWords() {
 	if(window.localStorage.getItem("chapter") != '')  { document.getElementById('chapters').value = window.localStorage.getItem("chapter") };
@@ -14,10 +15,12 @@ function loadWords() {
 }
 
 function nextQuote() {
-	clear();
 	
-	//showAnswer();
-	setTimeout(function(){}, 1000);
+	//If no answer is there, highlight the right answer for a second and move.
+	if (newQuoteIndex != 0) {
+		showAnswer();
+	}
+	clear();
 	
 	determineChapter();
 	determindNextQuestionNumber();
@@ -26,6 +29,8 @@ function nextQuote() {
 	document.getElementById('b').innerHTML = questions[newQuoteIndex].option2;
 	document.getElementById('c').innerHTML = questions[newQuoteIndex].option3;
 	document.getElementById('d').innerHTML = questions[newQuoteIndex].option4;
+	
+	blnScored = false;
 }
 
 function showAll() {
@@ -94,7 +99,7 @@ function showAnswer() {
 	if(strActualValue != strExpectedValue) { document.getElementById(strActualValue).classList.add('bg-danger');  document.getElementById(strExpectedValue).classList.add('bg-success'); }
 	if(strActualValue == strExpectedValue) { 
 		document.getElementById(strActualValue).classList.add('bg-success');
-		nScore = nScore + 1;
+		if (blnScored == false) { nScore = nScore + 1; blnScored = true; }
 		document.getElementById('lblScore').innerText = 'Score: ' + nScore;
 	}
 }
