@@ -7,13 +7,14 @@ var questions;
 function loadWords() {
 	//if(window.localStorage.getItem("bg-chapter") != '')  { document.getElementById('chapters').value = window.localStorage.getItem("bg-chapter") };
 	//determineChapter()
-	questions = qbPhonetics;
+	//questions = qbPhonetics;
 	nextQuote();
 }
 
 function nextQuote() {
-	//determineChapter();
 	clear();
+	
+	determineChapter();
 	randomize();
 	document.getElementById("question").innerHTML = questions[newQuoteIndex].question;
 	document.getElementById('a').innerHTML = questions[newQuoteIndex].option1;
@@ -38,10 +39,9 @@ function showAll() {
 //JS: helper Functions
 function determineChapter() {
 	var cmbChapter = document.getElementById("chapters");
-	if (cmbChapter.value == 12) shlokas = shlokas_12;
-	if (cmbChapter.value == 15) shlokas = shlokas_15;
-	if (cmbChapter.value == 16) shlokas = shlokas_16;
-	window.localStorage.setItem("bg-chapter", cmbChapter.value);
+	if (cmbChapter.value == 1) questions = qbPhonetics;
+	if (cmbChapter.value == 2) questions = qbBhagwadGita;
+	window.localStorage.setItem("chapter", cmbChapter.value);
 }
 function randomize() {
 	do{
@@ -161,3 +161,110 @@ qbPhonetics = [
 
 
 ]
+
+
+qbBhagwadGita =  [
+
+{"question": "1. Why did Arjuna start trembling, when he saw the Kaurava army in full force at the beginning of the Kurukshetra war ?","option1":"a. He was thrilled, and eager for battle.","option2": "b. He started to develop a fever.","option3": "c. He was upset at the thought of fighting his family members.","option4": "d. He was scared that he might not be able to win against the seasoned warriors in the Kaurava army.","answer": "d"},
+{"question": "2. Arjuna's bow, the _______________ started slipping from his hand.","option1":"a. Sharnga","option2": "b. Kodanda","option3": "c. Gandiva","option4": "d. Pinaka","answer": "c"},
+{"question": "3. Arjuna's symptoms after viewing the Kaurava army, indicate the follwing mental condition :","option1":"a. Depression","option2": "b. Obsessive compulsive disorder","option3": "c. ADHD","option4": "d. Bipolar disorder","answer": "a"},
+{"question": "4. When he saw Arjuna's dilemma, Krishna  _____________________.","option1":"a. Drove Arjuna away from the battlefield.","option2": "b. Praised Arjuna for his compassion towards his family.","option3": "c. Reprimanded Arjuna for the display of indecision.","option4": "d. Kept silent.","answer": "c"},
+{"question": "5. The three phases of understanding and expressing the absolute truth are :","option1":"a. Brahman, Paramātmā and Bhagavān.","option2": "b. Tamas, Rajas and Sattva.","option3": "c. Brahma, Vishnu and Shiva.","option4": "d. Pataala, Prithvi and Swarga.","answer": "a"},
+{"question": "6. Krishna observes that Arjuna displays ______________ .","option1":"a. Wisdom","option2": "b. Compassion","option3": "c. Impurities","option4": "d. Love.","answer": "c"},
+{"question": "7. The supreme personality who posesses all riches, all strength and all fame, all beauty, all knowledge and all renunciation is called ___________.","option1":"a. Bhagavan","option2": "b. Shiva","option3": "c. Brahma","option4": "d. Indra","answer": "a"},
+{"question": "8. By nature's law, the human form of life is specifically meant for self-realization in the form of ___________________________.","option1":"a. Sattva, Rajas or Tamas.","option2": "b. Karma yoga, Jnana yoga or Bhakti yoga.","option3": "c. Kshetra, Purusha and Prakriti.","option4": "d. Brahman, Paramatma and Bhagavan.","answer": "b"},
+{"question": "9. Those who are engaged in sense gratification require purification by means of the ___________.","option1":"a. Sadhanas","option2": "b. Karmas","option3": "c. Yogas","option4": "d. Yagnas","answer": "d"},
+{"question": "10. The yagna system is planned in such a way that sensory conscious persons may satisfy their desires ___________________________ in the reaction of sense gratificatory work.","option1":"a. without becoming entangled","option2": "b. while becoming entangled","option3": "c. without paying attention","option4": "d. while completely indulging","answer": "a"},
+{"question": "11. People who are attached to _____________ are unable to understand the supreme absolute truth.","option1":"a. materialism","option2": "b. spirituality","option3": "c. bhakti","option4": "d. gnana","answer": "a"},
+{"question": "12. Bhakti begins with a preliminary desire for ____________ .","option1":"a. Bhagavan","option2": "b. Supersoul","option3": "c. Self realization.","option4": "d. Freedom","answer": "c"},
+{"question": "13. By devotional service under the guidance of a _______________, we become free from material attachment.","option1":"a. spiritual master","option2": "b. teacher","option3": "c. guide","option4": "d. gnani","answer": "a"},
+{"question": "14. Even the most sinful sinner can cross the ocean of misery through the boat of ____________________________.","option1":"a. enlightenment","option2": "b. bhakti","option3": "c. transcendental knowledge","option4": "d. wisdom","answer": "c"},
+{"question": "15. Knowledge in Krishna consciousness can be achieved by a faithful man who firmly believes in ___________.","option1":"a. Narayana","option2": "b. Krishna","option3": "c. Bhagavan","option4": "d. Maha Vishnu","answer": "b"},
+{"question": "16. Faith is attained by discharge of devotional service and by chanting __________________________________________________________.","option1":"a. Bhajans.","option2": "b. Om Tat Sat.","option3": "c. Hare Krishna Hare Krishna , Krishna Krishna Hare Hare / Hare Rama Hare Rama Rama Rama Hare Hare.","option4": "d. Vithala naama.","answer": "c"},
+{"question": "17. A person who controls the _____________ can easily attain perfection in knowledge of Krishna Consciousness.","option1":"a. senses","option2": "b. mind","option3": "c. breath","option4": "d. food","answer": "a"},
+{"question": "18. The material world is a manifestation of the three modes of material nature, called the _____________.","option1":"a. Pradhana","option2": "b. Brahman","option3": "c. Adidevatha","option4": "d. Maya","answer": "a"},
+{"question": "19. The ________________ says that everything is related to Krishna or the Supreme Brahman, and everything belongs to him.","option1":"a. Kathopanishad","option2": "b. Mandukya Upanishad","option3": "c. Ishopanishad","option4": "d. Brihadaranyaka Upanishad","answer": "c"},
+{"question": "20. The lord as ______________  is present in both the dog, the cow, the elephant and persons of all castes.","option1":"a. Brahman","option2": "b. Paramatma","option3": "c. Atma","option4": "d. Bhagavan","answer": "b"},
+{"question": "21. The supreme lord is present in everybody's ______________ as Paramatma.","option1":"a. mind","option2": "b. body","option3": "c. ego","option4": "d. heart","answer": "d"},
+{"question": "22. A devotee who is constantly engaged in Krishna consciousness very quickly attains ___________________  in the Supreme.","option1":"a. advancement","option2": "b. bliss","option3": "c. liberation","option4": "d. happiness","answer": "c"},
+{"question": "23. The state of life where one does not feel the pangs of material miseries is called ________________.","option1":"a. Brahma Nirvana","option2": "b. Ananda","option3": "c. Sukha","option4": "d. Yoga","answer": "a"},
+{"question": "24. The devotee who is in Krishna consciousness can elevate himself simply by thinking of ____________ constantly.","option1":"a. Maha Vishnu","option2": "b. Radha","option3": "c. Narayana","option4": "d. Krishna","answer": "d"},
+{"question": "25. For him who has controlled the mind, the mind is the best of ________________.","option1":"a. teachers","option2": "b. friends","option3": "c. slaves","option4": "d. partners","answer": "b"},
+{"question": "26. Unless the _____________ is controlled, the practise of yoga is a waste of time.","option1":"a. mind","option2": "b. heart","option3": "c. breath","option4": "d. soul","answer": "a"},
+{"question": "27. Real yoga entails meeting the _______________ within the heart and then following his dictation.","option1":"a. Brahman","option2": "b. Paramatma","option3": "c. Ishvara","option4": "d. Bhagavan","answer": "b"},
+{"question": "28. Anyone who eats for pleasure while not offering it to Krishna is eating in _______________.","option1":"a. bhakti","option2": "b. sadhana","option3": "c. sin","option4": "d. consciousness","answer": "c"},
+{"question": "29. One who sleeps more than 6 hours out of 24 is influenced by the mode of _______________.","option1":"a. passion","option2": "b. ignorance","option3": "c. goodness","option4": "d. detachment","answer": "b"},
+{"question": "30. One who _________ more than required will dream very much while sleeping, and will hence sleep more than required.","option1":"a. works","option2": "b. eats","option3": "c. prays","option4": "d. enjoys","answer": "b"},
+{"question": "31. Krishna consciousness is the development of ______________ of Krishna.","option1":"a. freedom","option2": "b. friendship","option3": "c. attachment","option4": "d. love","answer": "d"},
+{"question": "32. Arjuna is called Partha because he is the ___________ of Prtha.","option1":"a. son","option2": "b. grandchild","option3": "c. husband","option4": "d. father","answer": "a"},
+{"question": "33. One who takes directly to ________________________, automatically knows about Brahmajyoti and Paramatma in full.","option1":"a. Sanyasa","option2": "b. Krishna Consciousness","option3": "c. Bhakti Marga","option4": "d. Vanaprastha","answer": "b"},
+{"question": "34. The lord says to Arjuna 'Tach chrnu' or __________________.","option1":"a. hear from me","option2": "b. speak to me","option3": "c. think of me","option4": "d. pray to me","answer": "a"},
+{"question": "35. Developing _________________ frees us from the modes of passion and ignorance, and thus lust and avarice are diminished.","option1":"a. communication skills","option2": "b. good sleep","option3": "c. strong body","option4": "d. devotional services","answer": "d"},
+{"question": "36. The divine material energy of Krishna is called ___________.","option1":"a. Brahman","option2": "b. Maya","option3": "c. Ishwara","option4": "d. Kshetra","answer": "b"},
+{"question": "38. Four classes of men surrender to Krishna - the distressed, the desirer of wealth, the inquisitive and the _____________________ ","option1":"a. renunciate","option2": "b. one searching for knowledge of the absolute","option3": "c. devotee","option4": "d. pleasure seeker","answer": "b"},
+{"question": "39. Arjuna addresses Krishna as ________________ or supreme person, because he knows him to be the supreme authority capable of giving definitive answers.","option1":"a. Keshava","option2": "b. Madhava","option3": "c. Paramatma","option4": "d. Purushottama","answer": "d"},
+{"question": "40. According to the Vedic dictionary, ____________ refers to the mind, soul, body and senses.","option1":"a. Atma","option2": "b. Brahman","option3": "c. Kshetra","option4": "d. Purusha","answer": "a"},
+{"question": "41. Brahman is indestructible and eternally existing, and its _______________ is not changed at any time.","option1":"a. colour","option2": "b. shape","option3": "c. form","option4": "d. constitution","answer": "d"},
+{"question": "42. Beyond Brahman there is ___________.","option1":"a. Parabrahman","option2": "b. Supersoul","option3": "c. Bhagavan","option4": "d. Atma","answer": "a"},
+{"question": "43. In vedic literature, the living entity is called __________ and brahman, but never parabrahman.","option1":"a. paramatma","option2": "b. jivatma","option3": "c. atma","option4": "d. bhagavan","answer": "b"},
+{"question": "44. The ____________ Upanishad describes the vedic sacrificial process.","option1":"a. Taittiriya ","option2": "b. Mandukya","option3": "c. Brihadaranyaka","option4": "d. Chandogya","answer": "d"},
+{"question": "45. In material nature, the jivatma may take a body from any of the ____________ forms of life.","option1":"a. 8400000","option2": "b. 1800000","option3": "c. 2200000","option4": "d. infinite","answer": "a"},
+{"question": "46. To attain material heavenly planets and enjoy their facilities, the jivatma sometimes performs ____________.","option1":"a. yoga","option2": "b. sacriﬁces (yajña)","option3": "c. sadhana","option4": "d. sanyasa","answer": "b"},
+{"question": "47. The physical nature, which is ____________ changing, is called adhibhūta [the material manifestation]","option1":"a. never","option2": "b. constantly","option3": "c. sometimes","option4": "d. rarely","answer": "b"},
+{"question": "48. The universal form of the Lord, which includes all the demigods, like those of the sun and moon, is called _______________.","option1":"a. bhagavan","option2": "b. parmatma","option3": "c. adhidaiva","option4": "d. purusha","answer": "c"},
+{"question": "49. The Supreme Lord, represented as the Supersoul in the heart of every embodied being, is called _____________ or the Lord of sacriﬁce.","option1":"a. adhidhaiva","option2": "b. adhiyajña","option3": "c. purusha","option4": "d. prakriti","answer": "b"},
+{"question": "50. The Supersoul is the _____________ of the individual soul’s activities and is the source of the soul’s various types of consciousness.","option1":"a. doer","option2": "b. inflencer","option3": "c. origin","option4": "d. witness","answer": "d"},
+{"question": "51. The __________ is seated beside the individual soul.","option1":"a. heart","option2": "b. brahman","option3": "c. bhagavan","option4": "d. Supersoul","answer": "d"},
+{"question": "52. When Krishna refers to himself as 'dhata', he is calling himself the '_____________'.","option1":"a. witness","option2": "b. influencer","option3": "c. creator","option4": "d. illusion","answer": "c"},
+{"question": "53. Whatever we want to know through the ________ is but a step toward understanding Krishna.","option1":"a. Vedas","option2": "b. Upanishads","option3": "c. Granthas","option4": "d. Puranas","answer": "a"},
+{"question": "54. __________ is also the Rig, Yajur and Sama vedas.","option1":"a. Krishna","option2": "b. Brahma","option3": "c. Shiva","option4": "d. Saraswathi","answer": "a"},
+{"question": "55. When offered with love and _________, Krishna accepts even plain water.","option1":"a. bhakti","option2": "b. silence","option3": "c. music","option4": "d. dance","answer": "a"},
+{"question": "56. Only the remains of sacrifices made to _______________ are fit for consumption by those seeking release from material entanglement.","option1":"a. Devatas","option2": "b. Krishna","option3": "c. Bhagavan","option4": "d. Ishwara","answer": "b"},
+{"question": "57. Whatever we do, eat, or give away should be done as _________ to Krishna.","option1":"a. dance","option2": "b. offering","option3": "c. poem","option4": "d. payment","answer": "b"},
+{"question": "58. When we do anything as an offering for Krishna it is called '______________'.","option1":"a. pooja","option2": "b. prarthana","option3": "c. archana","option4": "d. vandana","answer": "c"},
+{"question": "59. When an action is contaminated by ___________ reactions, it becomes auspicious or inauspicious.","option1":"a. illusory","option2": "b. gross","option3": "c. material","option4": "d. human","answer": "c"},
+{"question": "60. The word 'aja' means '______________'.","option1":"a. prominent","option2": "b. unborn","option3": "c. pious","option4": "d. sacred","answer": "b"},
+{"question": "61. The __________ Veda says that it was Krishna who,  in the beginning instructed Brahma in Vedic knowledge.","option1":"a. Yajur","option2": "b. Rig","option3": "c. Atharva","option4": "d. Sama","answer": "c"},
+{"question": "62. From __________________, Brahma and the patriarchs are born.","option1":"a. Krishna","option2": "b. Shiva","option3": "c. Brihaspati","option4": "d. Narayana","answer": "d"},
+{"question": "63. In the beginning of the creation there was only the Supreme Personality _______________.","option1":"a. Aum","option2": "b. Shiva","option3": "c. Narayana","option4": "d. Bhagavan","answer": "c"},
+{"question": "64. As per the Maha -Upanishad Lord Shiva was born from the ____________ of the Supreme Lord.","option1":"a. forehead","option2": "b. arm","option3": "c. eyes","option4": "d. throat","answer": "a"},
+{"question": "65. When a person knows the goal of life but is addicted to the fruits of activities, he is acting in _________.","option1":"a. karma-yoga","option2": "b. gnana yoga","option3": "c. bhakti yoga","option4": "d. buddhi yoga","answer": "a"},
+{"question": "66. When a person knows that the goal is Kṛṣṇa but he takes pleasure in mental speculations to understand Kṛṣṇa, he is acting in _______________.","option1":"a. karma-yoga","option2": "b. jñāna-yoga","option3": "c. bhakti yoga","option4": "d. buddhi yoga","answer": "b"},
+{"question": "67. When a person knows the goal and seeks Krishna completely in Krishna consciousness and devotional service, he is acting in ____________________.","option1":"a. karma-yoga","option2": "b. jñāna-yoga","option3": "c. bhakti yoga","option4": "d. buddhi yoga","answer": "c"},
+{"question": "68. Krishna first appeared before his parents Devaki and ____________ in a four handed form.","option1":"a. Nanda","option2": "b. Vasudeva","option3": "c. Ugrasena","option4": "d. Akrura","answer": "b"},
+{"question": "69. 'Su-durdarsham' means _______________________.","option1":"a. very easy to see","option2": "b. very difficult to see","option3": "c. very pleasing to see","option4": "d. very attactive to see","answer": "b"},
+{"question": "70. Innumerable universes enter into and come from Maha Vishnu simply by his ___________ process.","option1":"a. blinking","option2": "b. breathing","option3": "c. waking","option4": "d. sleeping","answer": "b"},
+{"question": "71. The word 'maitrah' means '__________'.","option1":"a. friendly","option2": "b. pretty","option3": "c. sister","option4": "d. cousin","answer": "a"},
+{"question": "72. _______________ means that a devotee does not attach much importance to the pains and trouble pertaining to the body.","option1":"a. Nirguna","option2": "b. Nirvana","option3": "c. Mumukshu","option4": "d. Nirmama","answer": "d"},
+{"question": "73. The term 'prakriti' means '__________________'.","option1":"a. planet","option2": "b. plants","option3": "c. nature","option4": "d. flowers","answer": "c"},
+{"question": "74. The term 'purusha' means '________________'.","option1":"a. masculine","option2": "b. enjoyer","option3": "c. giant","option4": "d. son of Puru.","answer": "b"},
+{"question": "75. 'Kshetragnya' means 'knower of the _______________'.","option1":"a. arts","option2": "b. warfare","option3": "c. field","option4": "d. politics","answer": "c"},
+{"question": "76. The lord's spiritual effulgence is referred to as '_____________________'","option1":"a. brahma jyoti","option2": "b. brahma vidya","option3": "c. Atma vidya","option4": "d. Brahman","answer": "a"},
+{"question": "77. The material elements that cover the brahma jyoti are referred to as ________________.","option1":"a. maya","option2": "b. prakriti","option3": "c. purusha","option4": "d. mahat-tattva","answer": "d"},
+{"question": "78. The word 'prabhu' means '_____________________'.","option1":"a. teacher","option2": "b. master","option3": "c. God","option4": "d. husband of Prabha","answer": "b"},
+{"question": "79. Rajas is the mode of passion and leads to ______________.","option1":"a. illusion","option2": "b. greed","option3": "c. bliss","option4": "d. war","answer": "b"},
+{"question": "80. Tamas is the mode of _______________ and leads to madness and delusion.","option1":"a. darkness","option2": "b. ignorance","option3": "c. failure","option4": "d. inertia","answer": "b"},
+{"question": "81. The name 'Yogeshwarah' means master of '_____________'.","option1":"a. yoga","option2": "b. mysticism","option3": "c. illusion","option4": "d. arts","answer": "b"},
+{"question": "82. Shivah means eternally ____________.","option1":"a. pure","option2": "b. blissful","option3": "c. constant","option4": "d. angry","answer": "a"},
+{"question": "83. Shasvatah means that which remains .","option1":"a. young at all times","option2": "b. eternal","option3": "c. constant","option4": "d. the same at all times","answer": "d"},
+{"question": "84. Saakshee means ____________________.","option1":"a. beautiful eyes","option2": "b. witness","option3": "c. doer","option4": "d. influencer","answer": "b"},
+{"question": "85. Sumedhah means one who has pure ______________.","option1":"a. consciousness","option2": "b. intelligence","option3": "c. bliss","option4": "d. ego","answer": "b"},
+{"question": "86. Naikaroopah means one who has ____________ forms.","option1":"a. infinite","option2": "b. no","option3": "c. finite","option4": "d. nine","answer": "a"},
+{"question": "87. Brihadroopa means ______________ and infinite form.","option1":"a. small","option2": "b. subtle","option3": "c. vast","option4": "d. solid","answer": "c"},
+{"question": "88. Sarvapraharanayudhah means one who has all kinds of _____________ for all kinds of assault and fight.","option1":"a. instruments","option2": "b. weapons / tools","option3": "c. skills","option4": "d. strategies","answer": "b"},
+{"question": "89. Praanadah means one who gives ___________ to all.","option1":"a. boons","option2": "b. mukti","option3": "c. praana","option4": "d. birth","answer": "c"},
+{"question": "90. Mahaasvanaha means one who posesses a _________________.","option1":"a. huge serpent","option2": "b. deep breath","option3": "c. large weapon","option4": "d. thundering voice","answer": "d"},
+{"question": "91. Medhavee means ___________.","option1":"a. child of Medhas","option2": "b. devoid of ego","option3": "c. supremely intelligent","option4": "d. great cowherd","answer": "c"},
+{"question": "95. Satyamedhah means 'one whose ________________ never fails'","option1":"a. effort","option2": "b. aim","option3": "c. truth","option4": "d. intelligence","answer": "d"},
+{"question": "94. Mahaabalah means one who has ______________ _.","option1":"a. supreme strength","option2": "b. supreme weapons","option3": "c. supreme wealth","option4": "d. Balarama","answer": "a"},
+{"question": "95. Vishwakarma means __________________________ of the world of objects.","option1":"a. observer","option2": "b. creator","option3": "c. influencer","option4": "d. designer","answer": "b"},
+{"question": "96. Vikramee means one who is full of ___________________.","option1":"a. prowess","option2": "b. vision","option3": "c. skill","option4": "d. strength","answer": "a"},
+{"question": "97. Akshobhyah means one with infinite ___________.","option1":"a. wealth","option2": "b. eyes","option3": "c. skill","option4": "d. patience","answer": "d"},
+{"question": "98. Amaanee means one who has no __________________.","option1":"a. darkness","option2": "b. pride","option3": "c. false vanity","option4": "d. disturbance","answer": "c"},
+{"question": "99. Avyaah means ________________________.","option1":"a. eternal","option2": "b. changeless","option3": "c. constant","option4": "d. enchanting","answer": "b"},
+{"question": "100. Chaturasrah means one who  _________________________ .","option1":"a. dispenses equal justice to all","option2": "b. lives in a four sided residence","option3": "c. who owns four worlds","option4": "d. who has four weapons","answer": "d"},
+
+
+
+]
+
