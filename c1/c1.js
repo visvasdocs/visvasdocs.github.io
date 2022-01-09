@@ -3,6 +3,7 @@ var newQuoteIndex = 0;
 var shlokas;
 var shlokas_12, shlokas_15, shlokas_16;
 var questions;
+var nScore = 0;
 
 function loadWords() {
 	if(window.localStorage.getItem("chapter") != '')  { document.getElementById('chapters').value = window.localStorage.getItem("chapter") };
@@ -14,6 +15,9 @@ function loadWords() {
 
 function nextQuote() {
 	clear();
+	
+	//showAnswer();
+	setTimeout(function(){}, 1000);
 	
 	determineChapter();
 	determindNextQuestionNumber();
@@ -75,20 +79,24 @@ function clear() {
 	document.getElementById('d').classList.remove('bg-danger');  document.getElementById('d').classList.remove('bg-success');
 }
 function showAnswer() {
-	//If no answer is selected
+	
+	//If no answer is selected, highlight the answer.
 	if(document.querySelector('input[name="options"]:checked') == null) {
-		alert('Select an answer to proceed further.');
+		strExpectedValue = questions[newQuoteIndex].answer;
+		document.getElementById(strExpectedValue).classList.add('bg-success');
 		return;
 	}
-	
 	strActualValue = document.querySelector('input[name="options"]:checked').value;
-	console.log(strActualValue);
 	strExpectedValue = questions[newQuoteIndex].answer;
 	document.getElementById("answer").innerHTML = 'Answer: ' + questions[newQuoteIndex].answer;
 	
 	//COLOR it accordingly
 	if(strActualValue != strExpectedValue) { document.getElementById(strActualValue).classList.add('bg-danger');  document.getElementById(strExpectedValue).classList.add('bg-success'); }
-	if(strActualValue == strExpectedValue) document.getElementById(strActualValue).classList.add('bg-success');
+	if(strActualValue == strExpectedValue) { 
+		document.getElementById(strActualValue).classList.add('bg-success');
+		nScore = nScore + 1;
+		document.getElementById('lblScore').innerText = 'Score: ' + nScore;
+	}
 }
 
 //================Shlokas
