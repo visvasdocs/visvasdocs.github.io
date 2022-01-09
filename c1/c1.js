@@ -1,5 +1,5 @@
 var oldIndex;
-var newQuoteIndex;
+var newQuoteIndex = 0;
 var shlokas;
 var shlokas_12, shlokas_15, shlokas_16;
 var questions;
@@ -15,7 +15,7 @@ function nextQuote() {
 	clear();
 	
 	determineChapter();
-	randomize();
+	determindNextQuestionNumber();
 	document.getElementById("question").innerHTML = questions[newQuoteIndex].question;
 	document.getElementById('a').innerHTML = questions[newQuoteIndex].option1;
 	document.getElementById('b').innerHTML = questions[newQuoteIndex].option2;
@@ -43,10 +43,17 @@ function determineChapter() {
 	if (cmbChapter.value == 2) questions = qbBhagwadGita;
 	window.localStorage.setItem("chapter", cmbChapter.value);
 }
-function randomize() {
-	do{
-		newQuoteIndex = Math.floor(Math.random() * questions.length);
-	} while ((newQuoteIndex == oldIndex));
+function determindNextQuestionNumber() {
+	var progressChoice = document.getElementById("choice").value;
+	if (progressChoice == 'order' ) { 
+		if (newQuoteIndex == questions.length - 1) newQuoteIndex = 0;
+		else newQuoteIndex = newQuoteIndex + 1;
+	}
+	if (progressChoice == 'random' ) {
+		do{
+			newQuoteIndex = Math.floor(Math.random() * questions.length);
+		} while ((newQuoteIndex == oldIndex));
+	}
 	oldIndex = newQuoteIndex;
 }
 function clear() {
