@@ -53,6 +53,7 @@ function determineChapter() {
 	if (cmbChapter.value == 2) questions = qbBhagwadGita;
 	if (cmbChapter.value == 3) questions = qbSanathanaDharma;
 	window.localStorage.setItem("chapter", cmbChapter.value);
+	console.log(questions.length)
 	
 	var cmbChoice = document.getElementById("choice");
 	window.localStorage.setItem("choice", cmbChoice.value);
