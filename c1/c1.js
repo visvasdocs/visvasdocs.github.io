@@ -48,6 +48,7 @@ function showAll() {
 
 //JS: helper Functions
 function determineChapter() {
+	console.log('here');
 	var cmbChapter = document.getElementById("chapters");
 	if (cmbChapter.value == 1) questions = qbPhonetics;
 	if (cmbChapter.value == 2) questions = qbBhagwadGita;
@@ -56,7 +57,7 @@ function determineChapter() {
 	if (cmbChapter.value == 5) questions = qbRamayana;
 	
 	window.localStorage.setItem("chapter", cmbChapter.value);
-	//console.log(questions.length)
+	console.log(questions.length)
 	
 	var cmbChoice = document.getElementById("choice");
 	window.localStorage.setItem("choice", cmbChoice.value);
