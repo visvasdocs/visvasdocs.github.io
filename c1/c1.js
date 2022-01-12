@@ -36,10 +36,10 @@ function nextQuote() {
 function showAll() {
 	determineChapter();
 	var qsTable = document.getElementById("qsTable");
-	var strFullTableContents = '<table class="table table-striped  text-black"><thead><tr><th>#</th><th>Question</th><th>A</th><th>B</th><th>C</th><th>D</th></tr></thead><tbody>';
+	var strFullTableContents = '<table class="table table-striped  text-black"><thead><tr><th>#</th><th>Ans:</th><th>Question</th><th>A</th><th>B</th><th>C</th><th>D</th></tr></thead><tbody>';
 	
 	questions.forEach(function(obj, index) { 
-		strFullTableContents = strFullTableContents + '<tr><td>' + (index+1) + '</td><td>' + obj.question + '</td><td>' + obj.option1 + '</td><td>' + obj.option2 + '</td><td>' + obj.option3 + '</td><td>' + obj.option4 + '</td></tr>';
+		strFullTableContents = strFullTableContents + '<tr><td>' + (index+1) + '</td><td class="text-primary">' + obj.answer + '</td><td>' + obj.question + '</td><td>' + obj.option1 + '</td><td>' + obj.option2 + '</td><td>' + obj.option3 + '</td><td>' + obj.option4 + '</td></tr>';
 	});
 	strFullTableContents = strFullTableContents + '</tbody></table>';
 	
@@ -48,7 +48,6 @@ function showAll() {
 
 //JS: helper Functions
 function determineChapter() {
-	console.log('here');
 	var cmbChapter = document.getElementById("chapters");
 	if (cmbChapter.value == 1) questions = qbPhonetics;
 	if (cmbChapter.value == 2) questions = qbBhagwadGita;
@@ -57,7 +56,6 @@ function determineChapter() {
 	if (cmbChapter.value == 5) questions = qbRamayana;
 	
 	window.localStorage.setItem("chapter", cmbChapter.value);
-	console.log(questions.length)
 	
 	var cmbChoice = document.getElementById("choice");
 	window.localStorage.setItem("choice", cmbChoice.value);
