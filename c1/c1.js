@@ -52,8 +52,10 @@ function determineChapter() {
 	if (cmbChapter.value == 1) questions = qbPhonetics;
 	if (cmbChapter.value == 2) questions = qbBhagwadGita;
 	if (cmbChapter.value == 3) questions = qbSanathanaDharma;
+	if (cmbChapter.value == 4) questions = qbMahabaratha;
+	
 	window.localStorage.setItem("chapter", cmbChapter.value);
-	console.log(questions.length)
+	//console.log(questions.length)
 	
 	var cmbChoice = document.getElementById("choice");
 	window.localStorage.setItem("choice", cmbChoice.value);
@@ -376,6 +378,94 @@ qbSanathanaDharma =  [
 {"question": "75. Which of the following is considered as practical approach to the teachings in Bhagavad Geeta to attain renunciation ?","option1":" a. Reading the Puranas","option2": " b. reciting the Vedas","option3": " c. studying the Upanishads","option4": " d. reciting Sri Vishnu Sahasranamam","answer": "d"},
 {"question": "76.  The famous mostly recited verse beginning with ' Om  saha naavavatu' appears in which Upanishad? ","option1":" a. kena upanishad","option2": " b. kada upanishad","option3": " c. mundaka upanishad","option4": " d. maandookya upanishad","answer": "a"},
 {"question": "77.  What is the motto inscribed in the VISVAS Logo ? ","option1":" a. satyameva jayate","option2": " b. aham bramhaasmi","option3": " c. yogakshemam vahaamyaham","option4": " d. dharmo rakshati rakshitaha","answer": "d"},
+
+
+]
+
+
+qbMahabaratha =  [
+
+
+{"question": "1.Which  is not a name for Mahabharatha  ?","option1":"a. Jaya","option2": "b.Bharatasamhita","option3": "c. Vyasasamhita","option4": "d.Bharata","answer": "c"},
+{"question": "2.How many slokas were there in the most abridged version of Mahabharatha written by Vyasa?","option1":"a.250","option2": "b. 8000","option3": "c. 1500","option4": "d. 50","answer": "d"},
+{"question": "3.Who was not the one who added more slokas to Mahabharatha?","option1":"a.Sage Sukha","option2": "b. Sage Vaisampayana","option3": "c. Sage Ugrasrava Sauti","option4": "d.Sage Vyasa","answer": "a"},
+{"question": "4.Mahabharatha  contains Ramayana also ","option1":"a. TRUE","option2": "b. FALSE","option3": "","option4": "","answer": "b"},
+{"question": "5.Who is a character who is seen across both Ramayana and Mahabharatha?","option1":"a.Vayu","option2": "b. Surya","option3": "c. Balarama","option4": "d. Jambavan","answer": "d"},
+{"question": "6.How many slokas are said to be in Mahabharatha when Vaisampayana narrated it to Janamejaya?","option1":"a.150","option2": "b.24000","option3": "c.100,000","option4": "d.48800","answer": "b"},
+{"question": "7.Mahabharatha happened in which Yuga ?","option1":"a. Kruta","option2": "b. Treta","option3": "c. Dwapara","option4": "d. Kaliyuga","answer": "c"},
+{"question": "8.Who is Krishnadwaipayana?","option1":"a.Sage Vasishta","option2": "b.Sage Daumya","option3": "c. Sage Vyasa","option4": "d.Bhishma","answer": "c"},
+{"question": "9.What does the name Vyasa signify?","option1":"a.Great author","option2": "b. Arranger","option3": "c. Black in colour","option4": "d. Ultimate Devotee","answer": "b"},
+{"question": "10.How many Parvas are there in the final version of Mahabharatha?","option1":"a.18","option2": "b.22","option3": "c.100","option4": "d.8","answer": "a"},
+{"question": "11.Which parvas together are called the ‘Shanthi Thrayam’?","option1":"a.Saupthika, Stree, Shanti","option2": "b. Ashwamedhika, Ashramavasika, Mahaprasthanika","option3": "c.Stree, Shanti, Anusasana","option4": "d. Shanti, Anusasana, Ashwamedhika","answer": "c"},
+{"question": "12.Which is the longest Parva in Mahabharatha?","option1":"a.Adi Parva","option2": "b. Anusasana Parva","option3": "c. Vana Parva","option4": "d.Shanti Parva","answer": "d"},
+{"question": "13.Which is the shortest Parva in Mahabharatha?","option1":"a.Stree Parva","option2": "b. Sabha Parva","option3": "c. Mahaprasthanika Parva    ","option4": "d.Mausala Parva","answer": "d"},
+{"question": "14.Who narrated the longer version of Mahabharatha and to whom?","option1":"a.Sauti  to Janamejaya","option2": "b.Vyasa  to Vaisampayana","option3": "c.Sauti to Sages","option4": "d.Vaisampayana to Janamejaya","answer": "c"},
+{"question": "15.Which king from Kuru race got his youth exchanged with the old age of his father ?","option1":"a.Kuru","option2": "b.Puru","option3": "c. Yayati","option4": "d. Shantanu","answer": "b"},
+{"question": "16.What does the word Itihasa mean?","option1":"a.Fun tales","option2": "b.Folk tales","option3": "c. Literature","option4": "d. History","answer": "d"},
+{"question": "17.Sage Shuka is an Amsa of which deity?","option1":"a.Lord Vishnu","option2": "b. Lord Indra","option3": "c. Lord Siva","option4": "d. Lord Brahma","answer": "c"},
+{"question": "18.Who gifts the Gandiva to  Arjuna ?","option1":"a.Varuna","option2": "b.Surya","option3": "c. Indra","option4": "d.Agni","answer": "d"},
+{"question": "19.Whom did Arjuna help by letting the Khandava forest burn without disturbance from the showers of Indra ?","option1":"a.Agni","option2": "b.Surya","option3": "c. Varuna","option4": "d. Vayu","answer": "a"},
+{"question": "20.What was the first test for Yudhistira by Lord Dharma ?","option1":"a.Question from Krishna on which brother is most dear","option2": "b.Question from Yaksha on which brother should be brought alive","option3": "c.Question from Yaksha on which brother is most skilful","option4": "d.Question from Yaksha on which brother has maximum strength","answer": "b"},
+{"question": "21.Which is not a treatise in Mahabharatha?","option1":"a.Sanat Sujatiyam","option2": "b. Vidura Nithi","option3": "c. Vyasopakyanam","option4": "d.Yaksha Prasna","answer": "c"},
+{"question": "22.Which is not  an authoritative edition of Mahabharatha ?","option1":"a.Eastern  Recension","option2": "b. Southern Recension","option3": "c. BORI edition","option4": "d.Kumbakonam ","answer": "a"},
+{"question": "23.Which is not  a name of Bhishma ? ","option1":"a.Gangeya","option2": "b. Devavrata","option3": "c. Dhananjaya","option4": "","answer": "c"},
+{"question": "24.Who were born as the children to Ganga and Santanu as a result of curse and hence were thrown in river immediately by their mother Ganga?","option1":"a.Devas","option2": "b.Yakshas","option3": "c. Maruts","option4": "d. Vasus","answer": "d"},
+{"question": "25.Which animal did Vidura refer as an example to give a hint of escaping to Pandavas  while they were in Jatugriha  ( Wax Palace )?","option1":"a.Pig","option2": "b. Rat","option3": "c.Fox","option4": "d.Owl","answer": "b"},
+{"question": "26.In his birth as Krishna, from whom does Bhagavan get the Sudharshan Chakra and Kaumodaki?","option1":"a.Vayu","option2": "b. Surya","option3": "c.Agni","option4": "d. Balarama","answer": "c"},
+{"question": "27.What was the main reason for Yudhishtira to accept the challenge of Dice game ","option1":"a.Passion","option2": "b. Order from Elders","option3": "c.Entertainment","option4": "d.Insistance from brothers","answer": "b"},
+{"question": "28.Which living being is given as example by Bhishma to indicate the tax collection and usage process by a King  ","option1":"a.Bull","option2": "b. Rat","option3": "c. Honeybee","option4": "d. Deer","answer": "c"},
+{"question": "29.What was the reason behind Duryodhana to challenge the Pandavas to the Dice game ? ","option1":"a. Jealousy","option2": "b. Pride in skill","option3": "c.Lust","option4": "d. Rivalry","answer": "d"},
+{"question": "30.Who was the only daughter of Dhritharashtra","option1":"a. Ulupi","option2": "b. Dussala","option3": "c. Durmati","option4": "d.Durbhagya","answer": "b"},
+{"question": "31.Which of the Kauravas fought from Pandava’s side ?","option1":"a.Dhurmuka ","option2": "b.Yuvaraja","option3": "c. Dhristasena","option4": "d.Yuyutsu","answer": "d"},
+{"question": "32.Which God did yudhistra pray to for the Inexhaustible Akshaya Patra and for what purpose?","option1":"a.Varuna","option2": "b.Agni","option3": "c.Annapurani","option4": "d.Surya","answer": "d"},
+{"question": "33.In the dialogue between Nahusha and  Yudhishtira in Ajagara Parva, Yudhistra says   ________________ is the key to determine the varna of a person, not  birth or status. ","option1":"a.Caste","option2": "b.Conduct","option3": "c.Colour","option4": "d. Charisma","answer": "b"},
+{"question": "34.How is maintenance of ecology indicated in Mahabharatha ","option1":"a.Description about various rivers","option2": "b.Not staying at one place in a forest for long time","option3": "c.Keep cleaning the rivers frequently","option4": "d.Frequent sacrifices ","answer": "b"},
+{"question": "35.Which of the following anecdotes is not there in Mahabharatha","option1":"a.Nalopakhyana","option2": "b. Story of  Rama","option3": "c.Story of Vasishta","option4": "d. Story of Parasurama","answer": "c"},
+{"question": "36.Which part of the Virata palace did Nakula stay disguised ?","option1":"a.Kitchen","option2": "b. Assembly","option3": "c. Army","option4": "d. Horses stable","answer": "d"},
+{"question": "37.Which part of the Virata palace did Sahadeva  stay disguised ?","option1":"a.Horses Stable","option2": "b. Cattle Shed","option3": "c. Army","option4": "d. Granary","answer": "b"},
+{"question": "38.Which part of the Virata palace did Yudhishtra stay disguised ?","option1":"a.Granary","option2": "b.Harem-Womens chamber","option3": "c.Assembly","option4": "d. Army","answer": "c"},
+{"question": "39.Which part of the Virata palace did Arjuna stay disguised ?","option1":"a.Harem-womens chamber","option2": "b. Horses stable","option3": "c.Army","option4": "d.Assembly","answer": "a"},
+{"question": "40.In some parts of India,  Vijayadasami  is celebrated to indicate which of the following incidents in Mahabharatha?","option1":"a.Crowning  of Yudhistra  at Indraprastha ","option2": "b.End of battle between Arjuna and Karna ","option3": "c.End of Kurukshetra War at the end of Saupthika Parva","option4": "d.End of day long war between Arjuna and Kaurava Army at the end of Virata Parva","answer": "d"},
+{"question": "41.Duryodhana  lure one of the kings to his side, who was going to meet Yudhistra and join the Pandava Army.  Who was it ?","option1":"a.Sisupala","option2": "b.Bhagadatta","option3": "c.Salya","option4": "d.Kritavarma        ","answer": "c"},
+{"question": "42.As per Vidura, sleep will not come to all of the below mentioned persons, except ","option1":"a.The one who is full of lust","option2": "b.the one who is passionate ","option3": "c. the one who is a thief","option4": "d.The one who is weak","answer": "b"},
+{"question": "43.Who receives the gift of special sight  from whom  during the war?","option1":"a.Dhritharashtra from Krishna","option2": "b.Sanjaya  from  Krishna","option3": "c.Gandhari  from Vyasa","option4": "d. Sanjaya from  Vyasa","answer": "d"},
+{"question": "44.Who was the first commander in chief of Kaurava Army ?","option1":"a.Karna","option2": "b. Bhishma","option3": "c. Drona","option4": "d. Duryodhana","answer": "b"},
+{"question": "45.Who was the first Commander in Chief of Pandava Army?","option1":"a.Dhrishtadhyumna","option2": "b.Arjuna","option3": "c. Yudhishtira","option4": "d.Bheema","answer": "a"},
+{"question": "46.Under whose commandership Karna declined to participate in war?","option1":"a.Drona","option2": "b.Ashwattama","option3": "c. Bhishma","option4": "d. Salya","answer": "c"},
+{"question": "47.What was the reason for Panchali’s fall during the ascend to Heaven ?","option1":"a.Anger","option2": "b. Weakness","option3": "c. Pride","option4": "d. Partiality","answer": "d"},
+{"question": "48.What was the reason for Arjuna’s fall during the ascend to Heaven?","option1":"a.Pride on his charm","option2": "b. Pride on his skill","option3": "c.Pride on Krishnas friendship","option4": "d.Pride on  strength","answer": "b"},
+{"question": "49.What was the reason for Nakula’s fall during the ascend to Heaven?","option1":"a.Pride on his charm","option2": "b. Pride on his skill","option3": "c.Pride on his knowledge","option4": "d.Pride on  strength","answer": "c"},
+{"question": "50.What was the reason for  Sahadeva’s fall during the ascend to Heaven?","option1":"a.Pride on his charm","option2": "b. Pride on his skill","option3": "c.Pride on his knowledge","option4": "d.Pride on  strength","answer": "a"},
+{"question": "51.What was the reason for  Bhima’s fall during the ascend to Heaven?","option1":"a.Pride on his charm","option2": "b. Pride on his skill","option3": "c.Pride on his knowledge","option4": "d.Pride on  strength","answer": "d"},
+{"question": "52.Which of the below  Kavya literature is not inspired by Mahabharatha?","option1":"a.Kumara sambhava","option2": "b.Sakunthalam ","option3": "c. Nalacharitam","option4": "d.Kiratarjuniya","answer": "a"},
+{"question": "53.Which was the astra that initially was given to Narakasura and later came to Bhagadatta?","option1":"a.Sakti Astra","option2": "b.Narayana Astra","option3": "c. Vaishnava Astra","option4": "d.Naga Astra","answer": "c"},
+{"question": "54.Which Astra , preserved for killing Arjuna was used to kill Ghatotkacha?","option1":"a.Sakti Astra","option2": "b.Narayana Astra","option3": "c. Vaishnava Astra","option4": "d.Naga Astra","answer": "a"},
+{"question": "55.From which astra of Karna did Krishna save Arjuna?","option1":"a.Sakti Astra","option2": "b.Narayana Astra","option3": "c. Vaishnava Astra","option4": "d.Naga Astra","answer": "d"},
+{"question": "56.What  is the key  quality  that all sages and rishis stress upon in various treatise and what does Bhishma indicate as the most important  quality to attain greatness ","option1":"a.Bravery","option2": "b. Ahimsa","option3": "c. Patience","option4": "d. Penance ","answer": "b"},
+{"question": "57.As per  Anusasana Parva,  the basic definition of Dharma, at a highlevel is :","option1":"a.Performing  sacrifice","option2": "b. Being patient","option3": "c.Preservation and Protection of Life","option4": "d.Obeying to Elders","answer": "c"},
+{"question": "58.Which astra becomes powerless in front of unarmed warriors?","option1":"a.Sakti Astra","option2": "b.Narayana Astra","option3": "c. Vaishnava Astra","option4": "d.Naga Astra","answer": "b"},
+{"question": "59.Which of these cannot be listed as a major cause of the deadly war of Kurukshetra?","option1":"a.Lust","option2": "b.Sibling rivalry","option3": "c.Blind affection","option4": "d.Jealousy","answer": "a"},
+{"question": "60.Who were the warriors who fought first in the place of Kurukshetra, before Mahabharata War","option1":"a.Bhishma  and father of Amba","option2": "b. Arjuna with Lord Siva","option3": "c.Bhishma  and Parasurama","option4": "d. Parasurama and Kartaviryajuna","answer": "c"},
+{"question": "61.In which parva the Mahabharatha yuddha ends with the defeat of Duryodhana?","option1":"a.Stree Parva","option2": "b. Salya parva","option3": "c. Saupthika Parva","option4": "d.Karna Parva","answer": "b"},
+{"question": "62.Which incident gives idea to Ashwattama for the nocturnal slaughter ?","option1":"a.Sight of Owls family in a tree","option2": "b. Owls and Crows flying together","option3": "c.Sight of Crow cheating an owl","option4": "d.Sight of an owl  cheating a crow","answer": "d"},
+{"question": "63.As we understand from the Stree  Parva,  Dhritharashtra and Gandhari held  the most grudge against which of the Pandavas  that they tried to kill him even after the war ?","option1":"a.Bhima","option2": "b.Arjuna","option3": "c. Krishna","option4": "d. Yudhishtira","answer": "a"},
+{"question": "64.Apart from Vishnu Sahasranama, Anusasana Parva has the 1000 names of  another deity too. Who is it  and who recites the same ?","option1":"a.Lakshmi sahasranama   by Bhishma","option2": "b.Siva Sahasranama by Bhishma","option3": "c.Siva Sahasranamam by Krishna","option4": "d. Vyasa Sahasranamam by Bhishma","answer": "c"},
+{"question": "65.As per  Anusasana Parva, Union of tilled soil and Seeds gives a harvest.   Tilled soil is  ________________  and Seeds are ______________","option1":"a.Actions in this life,  Destiny","option2": "b.Destiny, Actions in this life ","option3": "c.Destiny ,  Blessings ","option4": "d.Blessings,  Actions in this life","answer": "a"},
+{"question": "66.As per historians, which of the parvas could have been interpolations to the original Mahabharatha ?","option1":"a.Svargarohana Parva","option2": "b. Ashwamedhika parva","option3": "c. Stree Parva","option4": "d.Shanti Parva","answer": "d"},
+{"question": "67.What are the four phases in one’s life?","option1":"a.Dharma, Artha, kama, Moksha","option2": "b. Brahmacharya, Grahastha, Vanaprastha, Sanyasa","option3": "c. Brahmacharya, Grahastha, Sanyasa, Turiya","option4": "d. Brahmana, Kshatriya, Vaisya, Sudra","answer": "b"},
+{"question": "68.How many years are there in Kaliyuga?","option1":"a.25000","option2": "b.400000","option3": "c.432000","option4": "d.100000","answer": "c"},
+{"question": "69.How many years in a Mahayuga?","option1":"a.4320000","option2": "b.1000000","option3": "c.432000","option4": "d.40025000","answer": "a"},
+{"question": "70.How many Mahayugas in 1 Manvantara?","option1":"a.52","option2": "b.432","option3": "c.85","option4": "d.71","answer": "d"},
+{"question": "71.The curse of Gandhari to Krishna comes true starting from","option1":"a.Death of Upapandavas","option2": "b.Insulting of sages by the youth of yadava race","option3": "c.Return of Balarama from pilgrimage","option4": "d.Krishna  returning to Dwaraka","answer": "b"},
+{"question": "72.The Historical city of Dwaraka should have existed in the current state of ","option1":"a.Uttarpradesh","option2": "b. Rajasthan","option3": "c. Madhyapradesh or Maharashtra","option4": "d.Gujarat or Maharashtra","answer": "d"},
+{"question": "73.What was the second test to Yudhistira by  Lord Dharma?","option1":"a.Fall of all his brothers during ascend to heaven","option2": "b.Revelation of truth that karna is his elder brother","option3": "c.Coming of Indra and asking him to ascend his chariot without the dog","option4": "d.Picture of his kin in Hell ","answer": "c"},
+{"question": "74.What was the third test to Yudhistira by Lord Dharma?","option1":"a.Dog following him to Mount Meru","option2": "b.Picture of Pandavas in Hell ","option3": "c.Picture of Karna in Hell","option4": "d.Questioning by Lord Dharma","answer": "b"},
+{"question": "75.In Mahaprasthanika Parva Yudhistira says that he wll not give up on certain set of people.  Which one of the below is not part of that list ?","option1":"a.Terrified person","option2": "b. Devoted person","option3": "c. weak","option4": "d.speaks truth","answer": "d"},
+{"question": "76.Vyasa is said to have written the entire mahabharatha on the basis of  a  few  slokas. How many slokas were there?","option1":"a.4","option2": "b.150","option3": "c.10","option4": "d.20","answer": "a"},
+{"question": "77.What does Vyasa shout again and again as the basis of Life ?","option1":"a.Sathya","option2": "b.Moksha","option3": "c.Dharma","option4": "d.Love","answer": "c"},
+{"question": "78.Which two characters in Mahabharatha were manifestations of Lord Dharma?","option1":"a.Yudhishtira and  Drona","option2": "b.Yudhisthira  and  Kripacharya","option3": "c.Yudhisthira  and Vidura ","option4": "d. Yudhisthira  and Ashwattama","answer": "c"},
+{"question": "79.Who was given responsibility by Vyasa to retell the story of Mahabharata to Humans?","option1":"a.Sage Paila","option2": "b. Sage Vaisampayana","option3": "c. Sage Kashyapa","option4": "d. Sage Narada","answer": "c"},
+{"question": "80.Who was given responsibility by Vyasa to retell the story of Mahabharata to the Gods?","option1":"a.Sage Paila","option2": "b. Sage Vaisampayana","option3": "c. Sage Kashyapa","option4": "d. Sage Narada","answer": "d"},
 
 
 ]
