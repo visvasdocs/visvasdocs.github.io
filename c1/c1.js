@@ -581,7 +581,6 @@ qbRamayana = [
 {"question": "108.How many Rishis performed Sri Rama's Pattabhishekam?","option1":"A)   2","option2": "B)4","option3": "C)6","option4": "D)8","answer": "d"},
 {"question": "109.Who did Sri Rama give back the Pushpaka Vimana?","option1":"A)Vibhishana","option2": "B) Sugriva","option3": "C) Kubera","option4": "D) Indra","answer": "c"},
 {"question": "110.Who was appointed as the Prince after Sri Rama's coronation?","option1":"A)Lakshmana","option2": "B) Bharatha","option3": "C) Shathrughna","option4": "D)Hanuman","answer": "b"},
-{"question": "","option1":"","option2": "","option3": "","option4": "","answer": ""},
 
 
 ]
