@@ -498,7 +498,7 @@ qbRamayana = [
 {"question": "24.Rama is part of which dynasty?","option1":"A)Surya","option2": "B) Chandra","option3": "C) Vishnu","option4": "D)Indra","answer": "a"},
 {"question": "25.Which Yaga did King Dasaratha Perform for progeny?","option1":"A)Sathram","option2": "B) Visvajit","option3": "C) Vajapeyam","option4": "D) Putra Kameshti","answer": "d"},
 {"question": "26.Who performed the Yaga for King Dasaratha?","option1":"A)Vasishta","option2": "B) Rishyasrunga","option3": "C) Viswamitra","option4": "D) Agsathya","answer": "b"},
-{"question": "27.Who was Lakshmana's mother?","option1":"A)Kouslaya","option2": "B) Sumithra","option3": "C) Kaikeyi","option4": "D) Savithri","answer": "d"},
+{"question": "27.Who was Lakshmana's mother?","option1":"A)Kouslaya","option2": "B) Sumithra","option3": "C) Kaikeyi","option4": "D) Savithri","answer": "b"},
 {"question": "28.The Devathas Surrendered to whom for portection against Ravana?","option1":"A)Siva","option2": "B) Brahma","option3": "C) Narayana","option4": "D) Bruhaspath","answer": "c"},
 {"question": "29.How many planets were in exalted position when Sri Rama incarnated?","option1":"A) 2","option2": "B) 3","option3": "C) 4","option4": "D) 5","answer": "d"},
 {"question": "30.Sage Viswamitra woke up Rama for what purpose?","option1":"A)Leave Ashram","option2": "B)Protect Yagna","option3": "C) Doing morning duties ","option4": "D)Take breakfast","answer": "c"},
@@ -581,6 +581,5 @@ qbRamayana = [
 {"question": "108.How many Rishis performed Sri Rama's Pattabhishekam?","option1":"A)   2","option2": "B)4","option3": "C)6","option4": "D)8","answer": "d"},
 {"question": "109.Who did Sri Rama give back the Pushpaka Vimana?","option1":"A)Vibhishana","option2": "B) Sugriva","option3": "C) Kubera","option4": "D) Indra","answer": "c"},
 {"question": "110.Who was appointed as the Prince after Sri Rama's coronation?","option1":"A)Lakshmana","option2": "B) Bharatha","option3": "C) Shathrughna","option4": "D)Hanuman","answer": "b"},
-
 
 ]
