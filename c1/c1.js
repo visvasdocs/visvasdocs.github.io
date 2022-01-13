@@ -296,7 +296,6 @@ qbBhagwadGita =  [
 {"question": "100. Chaturasrah means one who  _________________________ .","option1":"a. dispenses equal justice to all","option2": "b. lives in a four sided residence","option3": "c. who owns four worlds","option4": "d. who has four weapons","answer": "a"},
 
 
-
 ]
 
 qbSanathanaDharma =  [
@@ -336,7 +335,7 @@ qbSanathanaDharma =  [
 {"question": "33. Did Mahatma Gandhi strongly rely on Sanatana Dharma ?","option1":"a. Yes","option2": "b. No","option3": "","option4": "","answer": "a"},
 {"question": "34. In the Bhagavad-Gita, Arjuna's charioteer advises him to join the battle without a desire for the results of the action, for it is Arjuna's _________ as a warrior to fight.","option1":" a. dharma","option2": " b. karma","option3": " c. moksha","option4": " d. samsara","answer": "a"},
 {"question": "35. What is the name for lines of poetry by the ninth-century poet Andaal, a devotee-poet of Bhagwan Krishna,  for capturing in verse her experiences of the divine?","option1":" a. sacred knowledge","option2": " b. secret sorrows","option3": " c. secret garden","option4": " d. Thiruppaavai, Naachiyaar Thirumozhi","answer": "d"},
-{"question": "36. Which text includes instructions on how to correctly conduct the ritual of cremation so the deceased can journey to his or her ancestors?","option1":" a. Upanishads","option2": " b. Itihaasaas","option3": " c. Rig-Veda and Garuda Puraanam","option4": " d. the Yoga Sutra","answer": "d"},
+{"question": "36. Which text includes instructions on how to correctly conduct the ritual of cremation so the deceased can journey to his or her ancestors?","option1":" a. Upanishads","option2": " b. Itihaasaas","option3": " c. Rig-Veda and Garuda Puraanam","option4": " d. the Yoga Sutra","answer": "c"},
 {"question": "37. Who created the school of philosophy called Advaita Vedanta?","option1":" a. Adi Shankara","option2": " b. Krishna","option3": " c. Shiva","option4": " d. Gandhi","answer": "a"},
 {"question": "38. The meaning and use of Om is explained is explained by _________.","option1":" a. the Vedas","option2": " b. Upanishads","option3": " c. the Sutras","option4": " d. the Ramayana","answer": "b"},
 {"question": "39. In which holy verses texts are deities portrayed as intimately involved in the affairs of humans, sometimes appearing to devotees to deliver rewards, punishments, or warnings?","option1":" a. the Puranas","option2": " b. the Vedas","option3": " c. the Upanishads","option4": " d. the Ramayana","answer": "a"},
