@@ -1,7 +1,7 @@
 var oldIndex;
 var newQuoteIndex;
 var shlokas;
-var shlokas_12, shlokas_15, shlokas_16;
+var shlokas_12, shlokas_15, shlokas_16, shlokas_1;
 
 function loadWords() {
 	if(window.localStorage.getItem("bg-chapter") != '')  { document.getElementById('chapters').value = window.localStorage.getItem("bg-chapter") };
@@ -43,6 +43,7 @@ function determineChapter() {
 	if (cmbChapter.value == 12) shlokas = shlokas_12;
 	if (cmbChapter.value == 15) shlokas = shlokas_15;
 	if (cmbChapter.value == 16) shlokas = shlokas_16;
+	if (cmbChapter.value == 1) shlokas = shlokas_1;
 	window.localStorage.setItem("bg-chapter", cmbChapter.value);
 }
 function randomize() {
@@ -135,3 +136,55 @@ shlokas_16 = [
 {"verse": "Yash यः शास्त्रविधि , मुत्सृज्य वर्तते कामकारतः ।, न स सिद्धिम वाप्नोति , न सुखं न परां गतिम् ॥ १६-२३॥ 16.23","chapter_number":16,"shloka_number": 23},
 {"verse": "thasmaa तस्माच्छास्त्रं प्रमाणं ते , कार्याकार्यव्य वस्थितौ ।,  ज्ञात्वा शास्त्रविधानोक्तं , कर्म कर्तुमि हार्हसि ॥ १६-२४॥ 16.24","chapter_number":16,"shloka_number": 24},
 ];
+
+shlokas_1 = [
+
+{"verse": "धृतराष्ट्र उवाच  धर्मक्षेत्रे कुरुक्षेत्रे,  समवेता युयुत्सव: ।  , मामका: पाण्डवाश्चैव , किमकुर्वत सञ्जय ॥ १ ॥","chapter_number":1,"shloka_number": 1},
+{"verse": "सञ्जय उवाच  दृष्ट्वा तु पाण्डवानीकं","chapter_number":1,"shloka_number": 2},
+{"verse": "pashyai पश्यैतां पाण्डुपुत्राणाm, aaचार्य महतीं चमूम् । , व्यूढां द्रुपदपुत्रेण, तव शिष्येण धीमता ॥ ३ ॥","chapter_number":1,"shloka_number": 3},
+{"verse": "athra अत्र श‍ूरा महेष्वासा: , भीमार्जुन समा युधि । , युयुधानो विराटश्च,  द्रुपदश्च महा रथः ॥ ४ ॥","chapter_number":1,"shloka_number": 4},
+{"verse": "dhrushta धृष्टकेतुश्चेकितानः , काशि राजश्च वीर्यवान् ।,  पुरुजित्कुन्ति भोजश्च, शैब्यश्च नरपुङ्गवः ॥ ५ ॥","chapter_number":1,"shloka_number": 5},
+{"verse": "yudhaa युधामन्युश्च विक्रान्त:, उत्तमौजाश्च वीर्यवान् ।,  सौभद्रो द्रौपदेयाश्च,  सर्व एव महारथाः ॥ ६ ॥","chapter_number":1,"shloka_number": 6},
+{"verse": "asmakam अस्माकं तु विशिष्टा ये, तान्निबोध-द्विजोत्तम ।,  नायका मम सैन्यस्य,  संज्ञार्थm तान्ब्रवीमि ते ॥ ७ ॥","chapter_number":1,"shloka_number": 7},
+{"verse": "bhavaan भवान्भीष्मश्च कर्णश्च,  कृपश्च समितिंजयः ।, अश्वत्थामा विकर्णश्च, सौमदत्तिस्त थैव च ॥ ८ ॥","chapter_number":1,"shloka_number": 8},
+{"verse": "anye अन्ये च बहवः श‍ूरा:, मदर्थेत्यक्त जीविताः ।,  नानाशस्त्र-प्रहरणाः , सर्वे युद्ध विशारदाः ॥ ९ ॥","chapter_number":1,"shloka_number": 9},
+{"verse": "aparya अपर्याप्त‍ं तदस्माकं,  बलं भीष्माभिरक्षितम् ।,  पर्याप्त‍ं त्विदमेतेषां , बलं भीमाभिरक्षितम् ॥ १० ॥","chapter_number":1,"shloka_number": 10},
+{"verse": "ayaneshu अयनेषु च सर्वेषु , यथा भागव मस्थिताः ।, भीष्म मेवाभि रक्षन्तु , भवन्तः सर्व एव हि ॥ ११ ॥","chapter_number":1,"shloka_number": 11},
+{"verse": "thasya तस्य सञ्जन यन्हर्षं,  कुरुवृद्धः पितामहः ।, सिंहनादं विनद्योच्च‍ैः , शङ्खं दध्मौ प्रतापवान् ॥ १२ ॥","chapter_number":1,"shloka_number": 12},
+{"verse": "thathash shanka ततः शङ्खाश्च भेर्यश्च, पणवान कगोमुखाः ।,  सहसैवाभ्य हन्यन्त,  स शब्दस्तु मुलोऽभवत् ॥ १३ ॥","chapter_number":1,"shloka_number": 13},
+{"verse": "Thatha-sh shve IMP ततः श्वेतैर्ह यैर्युक्ते,  महति स्यन्दने स्थितौ ।,  माधवः पाण्डवश्चैव , दिव्यौ शङ्खौ प्रदध्मतुः ॥ १४ ॥","chapter_number":1,"shloka_number": 14},
+{"verse": "paancha पाञ्चजन्यं हृषीकेश: , देवदत्तं धनञ्जयः ।,  पौण्ड्रं दध्मौ महाशङ्खं , भीमकर्मा वृकोदरः ॥ १५ ॥","chapter_number":1,"shloka_number": 15},
+{"verse": "anantha अनन्तविजयं राजा,  कुन्तीपुत्रो युधिष्ठिरः । , नकुलः सहदेवश्च , सुघो षमणि पुष्पकौ ॥ १६ ॥","chapter_number":1,"shloka_number": 16},
+{"verse": "kaashya काश्यश्च परमेष्वास:, शिखण्डी च महारथ: ।,  धृष्टद्युम्न‍ो विराटश्च, सात्यकिश्‍चाप राजित: ॥ १७ ॥","chapter_number":1,"shloka_number": 17},
+{"verse": "drupadho द्रुपदो द्रौपदेयाश्च,  सर्वश: पृथिवीपते ।, सौभद्रश्च महाबाहु: , शङ्खान्दध्मु: पृथक्पृथक् ॥ १८ ॥","chapter_number":1,"shloka_number": 18},
+{"verse": "sagosho स घोषो धार्तराष्ट्राणां , हृदयानि व्यदारयत् ।, नभश्च पृ धिवीं चैव , तुमुलोऽvyaनुनादयन् ॥ १९ ॥","chapter_number":1,"shloka_number": 19},
+{"verse": "athavya vasthi अथ व्यवस्थितान्दृष्ट्वा , धार्तराष्ट्रा न्कपिध्वजः । , प्रवृत्ते शस्त्रसम्पाते , धनुरुद्यम्य पाण्डवः । ॥ २० ॥","chapter_number":1,"shloka_number": 20},
+{"verse": "hrushi हृषीकेशं तदा वाक्यm , eदमाह महीपते ,  अर्जुन उवाच  सेनयोरुभयोर्मध्ये , रथं-स्थापय मेऽच्युत । ॥ २१ ॥","chapter_number":1,"shloka_number": 21},
+{"verse": "yaava dhe यावदेतान्निरीक्षेऽहं योद्‍धु ,कामान वस्थितान् , कैर्मया सह योद्धव्यm , aस्मिन्‍रण समुद्यमे ॥ २२ ॥","chapter_number":1,"shloka_number": 22},
+{"verse": "yothsya योत्स्य मानान वेक्षेऽहं , य एतेऽत्र समागताः । , धार्तराष्ट्रस्य दुर्बुद्धे: , र्युद्धे प्रियचि-कीर्षवः ॥ २३ ॥","chapter_number":1,"shloka_number": 23},
+{"verse": "Eva muktho सञ्जय उवाच एवमुक्तो हृषीकेश:, गुडाकेशेन भारत ।,  सेन योरुभयो र्मध्ये , स्थाप यित्वा रथोत्तमम् ॥ २४ ॥","chapter_number":1,"shloka_number": 24},
+{"verse": "Bheeshma भीष्मद्रोण-प्रमुखतः , सर्वेषां च महीक्षिताम् ।,  उवाच पार्थ पश्यैताn, समवेताn कुरूनिति ॥ २५ ॥ 25","chapter_number":1,"shloka_number": 25},
+{"verse": "Thathraa तत्रापश्य-त्स्थितान्पार्थः , पितॄ नथ पितामहान्।, आचार्या न्मातुलान्भ्रातॄn , puत्रान्पौत्रान्सखींस्तथा। ॥ २६ ॥ 26","chapter_number":1,"shloka_number": 26},
+{"verse": "Shwashu श्वश‍ुरान्सुहृ दश्चैव , सेनयोरु भयोरपि  , तान्समीक्ष्य स कौन्तेयः , सर्वान्बन्धून वस्थितान् ।27","chapter_number":1,"shloka_number": 27},
+{"verse": "Krupayaa कृपया परयाविष्ट: , विषी दन्निद मब्रवीत् , अर्जुन उवाच दृष्ट्वेमं स्वजनं कृष्ण , युयुत्सुं समुपस्थितम् । 28","chapter_number":1,"shloka_number": 28},
+{"verse": "Seedhanthi सीदन्ति मम गात्राणि , मुखं च परिश‍ुष्यति ,  वेपथुश्च शरीरे मे , रोमहर्षश्च जायते । 29","chapter_number":1,"shloka_number": 29},
+{"verse": "Gaandeevam गाण्डीवं स्रंसते हस्ताth , त्त्वक्च‍ैव परिदह्यते ,  न च शक्न‍ोम्य वस्थातुं , भ्रमतीव च मे मनः 30","chapter_number":1,"shloka_number": 30},
+{"verse": "Nimithaani-cha निमित्तानि च पश्यामि , विपरीतानि केशव ,न च श्रेयोऽनु पश्यामि , हत्वा स्वजनमाहवे । 31","chapter_number":1,"shloka_number": 31},
+{"verse": "NaKaankshe न काङ्क्षे विजयं कृष्ण , न च राज्यं सुखानि च , किं नो राज्येन गोविन्द , किं भोगैर्जी वितेन वा । 32","chapter_number":1,"shloka_number": 32},
+{"verse": "Yeshaa Marthe येषामर्थे काङ्‍क्षितn , न: राज्यं भोगाः सुखानि च  , त इमेऽवस्थिता युद्धे , प्राणांस्त्यक्त्वा धनानि च । 33","chapter_number":1,"shloka_number": 33},
+{"verse": "Aachaaryaaf pitharaf आचार्याः पितरः पुत्रा: ,thaथैव च पितामहाः , मातुलाः श्वश‍ुराः पौत्राः , श्यालाः सम्बन्धि नस्तथा । 34","chapter_number":1,"shloka_number": 34},
+{"verse": "Yethaanna Hanthu एतान्न-हन्तु मिच्छामि , घ्न‍तोऽपि मधु-सूदन  , अपि त्रैलोक्य राज्यस्य , हेतोः किं नु महीकृते । 35","chapter_number":1,"shloka_number": 35},
+{"verse": "Nihathya निहत्य धार्तराष्ट्रान्नः , का-प्रीतिः स्याज्ज‍नार्दन ,  पापमेवाश्रयेदस्माn , हत्वैताना ततायिनः । 36","chapter_number":1,"shloka_number": 36},
+{"verse": "Thasmaan Naarha तस्मान्नार्हा वयं हन्तुं , धार्त राष्ट्राnस्व बान्धवान् ।,  स्वजनं हिकथं हत्वा , सुखिनः स्याम माधव ॥ 37 ॥","chapter_number":1,"shloka_number": 37},
+{"verse": "Yadhyap yethe यद्यप्येते न पश्यन्ति , लोभोपहतचेतसः ।, कुलक्षयकृतं दोषं , मित्रद्रोहे च पातकम् ॥ 38 ॥","chapter_number":1,"shloka_number": 38},
+{"verse": "Kadhan Nagneye कधn-नज्ञेय मस्माभिः , पापादस्मa-न्निवर्तितुम् ।, कुलक्षय-कृतं दोषं , प्रपश्यद्भ‍िr र्जनार्दन ॥ 39 ॥","chapter_number":1,"shloka_number": 39},
+{"verse": "Kulakshaye कुलक्षये-प्रणश्यन्ति , कुलधर्माः सनातनाः ।, धर्मे नष्टे कुलं कृत्स्नm , aधर्मोऽ भिभवत्युत ॥ 40 ॥","chapter_number":1,"shloka_number": 40},
+{"verse": "Adharmaa अधर्माभिभवात्कृष्ण , प्रदुष्यन्ति कुलस्त्रियः ।, स्त्रीषु दुष्टासु वार्ष्णेय , जायते वर्णसङ्करः ॥ 41 ॥","chapter_number":1,"shloka_number": 41},
+{"verse": "Sankaro Nara सङ्करो नरकायैव , कुलघ्न‍ानां कुलस्य च ।, पतन्ति पितरो ह्येषां , लुप्त पिण्डोद कक्रियाः ॥ 42 ॥","chapter_number":1,"shloka_number": 42},
+{"verse": "Dhoshai Rethai दोषैरेतैः कुलघ्न‍ानां , वर्ण सङ्कर कारकैः ।, उत्साद्यन्ते जातिधर्माः , कुलधर्माश्च शाश्वताः ॥ 43 ॥","chapter_number":1,"shloka_number": 43},
+{"verse": "Uthsanna उत्सन्न कुलधर्माणां , मनुष्याणां जनार्दन ।, नरके नियतं वास: , भवतीत्य नुश‍ुश्रुम ॥ 44 ॥","chapter_number":1,"shloka_number": 44},
+{"verse": "Aho Batha अहो बत महत्पापं , कर्तुं व्यवसिता वयम् ।,  यद्राज्यसुख लोभेन , हन्तुं स्वजन मुद्यताः ॥ 45 ॥","chapter_number":1,"shloka_number": 45},
+{"verse": "Yadhi Maamap-prathee यदि मामप्रतीकारm , aशस्त्रं शस्त्रपाणयः । , धार्तराष्ट्रा रणे हन्यु: ,thaन्मे क्षेमतरं भवेत् ॥ 46 ॥","chapter_number":1,"shloka_number": 46},
+{"verse": "Eva mukthvaa सञ्जय उवाच एव मुक्त्वार्जुनः संख्ये , रथोपस्थ उपाविशत् । , विसृज्य सशरं चापं , शोकसं विग्न‍मानसः ॥ 47 ॥","chapter_number":1,"shloka_number": 47},
+
+]
