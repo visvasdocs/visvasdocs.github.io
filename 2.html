@@ -14,11 +14,11 @@
 </head>
 
 <body onload="loadWords()" bgcolor="seashell">
-<div class="container">
+<div class="container-fluid">
 	<h1 class="text-center"><strong>Bhagwad Gita Quiz</strong></h1>
 
 	<label for="chapters">Choose a chapter:</label>
-	<select name="chapters" id="chapters">
+	<select name="chapters" id="chapters" onchange="nextQuote()">
 	  <option value="12">12</option><option value="15">15</option><option value="16">16</option><option value="1">1</option>
 	</select>
 	<div class="row">

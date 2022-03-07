@@ -29,7 +29,7 @@ function showAll() {
 	var strFullTableContents = '<table class="table table-striped  text-black"><thead><tr><th>#</th><th>Shlokam</th></tr></thead><tbody>';
 	
 	shlokas.forEach(function(obj) { 
-		console.log(obj.id);
+		//console.log(obj.shloka_number);
 		strFullTableContents = strFullTableContents + '<tr><td>' + obj.shloka_number + '</td><td>' + obj.verse + '</td></tr>';
 	});
 	strFullTableContents = strFullTableContents + '</tbody></table>';
@@ -138,9 +138,8 @@ shlokas_16 = [
 ];
 
 shlokas_1 = [
-
 {"verse": "धृतराष्ट्र उवाच  धर्मक्षेत्रे कुरुक्षेत्रे,  समवेता युयुत्सव: ।  , मामका: पाण्डवाश्चैव , किमकुर्वत सञ्जय ॥ १ ॥","chapter_number":1,"shloka_number": 1},
-{"verse": "सञ्जय उवाच  दृष्ट्वा तु पाण्डवानीकं, व्यूढं दुर्योधनस्तदा ।,  आचार्य मुपसङ्गम्य, राजा वचनमब्रवीत् ॥ २ ॥" "chapter_number":1,"shloka_number": 2},
+{"verse": "सञ्जय उवाच  दृष्ट्वा तु पाण्डवानीकं, व्यूढं दुर्योधनस्तदा ।,  आचार्य मुपसङ्गम्य, राजा वचनमब्रवीत् ॥ २ ॥", "chapter_number":1,"shloka_number": 2},
 {"verse": "pashyai पश्यैतां पाण्डुपुत्राणाm, aaचार्य महतीं चमूम् । , व्यूढां द्रुपदपुत्रेण, तव शिष्येण धीमता ॥ ३ ॥","chapter_number":1,"shloka_number": 3},
 {"verse": "athra अत्र श‍ूरा महेष्वासा: , भीमार्जुन समा युधि । , युयुधानो विराटश्च,  द्रुपदश्च महा रथः ॥ ४ ॥","chapter_number":1,"shloka_number": 4},
 {"verse": "dhrushta धृष्टकेतुश्चेकितानः , काशि राजश्च वीर्यवान् ।,  पुरुजित्कुन्ति भोजश्च, शैब्यश्च नरपुङ्गवः ॥ ५ ॥","chapter_number":1,"shloka_number": 5},
@@ -185,6 +184,6 @@ shlokas_1 = [
 {"verse": "Uthsanna उत्सन्न कुलधर्माणां , मनुष्याणां जनार्दन ।, नरके नियतं वास: , भवतीत्य नुश‍ुश्रुम ॥ 44 ॥","chapter_number":1,"shloka_number": 44},
 {"verse": "Aho Batha अहो बत महत्पापं , कर्तुं व्यवसिता वयम् ।,  यद्राज्यसुख लोभेन , हन्तुं स्वजन मुद्यताः ॥ 45 ॥","chapter_number":1,"shloka_number": 45},
 {"verse": "Yadhi Maamap-prathee यदि मामप्रतीकारm , aशस्त्रं शस्त्रपाणयः । , धार्तराष्ट्रा रणे हन्यु: ,thaन्मे क्षेमतरं भवेत् ॥ 46 ॥","chapter_number":1,"shloka_number": 46},
-{"verse": "Eva mukthvaa सञ्जय उवाच एव मुक्त्वार्जुनः संख्ये , रथोपस्थ उपाविशत् । , विसृज्य सशरं चापं , शोकसं विग्न‍मानसः ॥ 47 ॥","chapter_number":1,"shloka_number": 47},
+{"verse": "Eva mukthvaa सञ्जय उवाच एव मुक्त्वार्जुनः संख्ये , रथोपस्थ उपाविशत् । , विसृज्य सशरं चापं , शोकसं विग्न‍मानसः ॥ 47 ॥","chapter_number":1,"shloka_number": 47}
 
 ]
