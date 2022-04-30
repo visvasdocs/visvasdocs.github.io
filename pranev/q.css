@@ -4,3 +4,9 @@ body {
 	font-family: sans-serif !important;
 	background: #cef788;
 }
+
+img{
+    width: 75%;
+    height: 75%;
+    object-fit: contain;
+}
