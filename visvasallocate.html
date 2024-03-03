@@ -9,7 +9,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   
   <link rel="stylesheet" href="visvas.css">
-  <script type = "text/javascript" src="visvas.js?v=11"></script>
+  <script type = "text/javascript" src="visvas.js?v=13"></script>
 </head>
 <body onload="loadPeople()">
 
@@ -82,12 +82,14 @@
 	  </div>
 	</div>
 
+
 	<!--Allocation-->
 	<div class="col-sm-6">
 		<div class="row">
 			<button type="button" accesskey="a" class="btn btn-success" style="margin: 10px 5px 5px 10px;" onclick = "allocate('asis')">Allocate</button>
 			<button type="button" class="btn btn-success" style="margin: 10px 5px 5px 10px;" onclick = "allocate('random')">Alloc Randomly</button>
 			<button type="button" class="btn btn-success" style="margin: 10px 5px 5px 10px;" onclick = "allocate('roll')">Alloc on-Roll</button>
+			<button type="button" class="btn btn-success" style="margin: 10px 5px 5px 10px;" onclick = "allocate('shloka')">Alloc only Shloka</button>
 		</div>
 	  <label for="allocation" class="form-label">Allocation</label>
 	  <textarea class="form-control" id="allocation" rows="15" style="font-family: Courier; background: #e6ebe7"></textarea>
