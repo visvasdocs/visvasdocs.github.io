@@ -30,6 +30,7 @@ function allocate(strStyle) {
 	}
 	
 	//Randomize / Making big / Rolling
+	console.log(strStyle);
 	if(strStyle == 'random') shuffle(curatedLines);
 	if(strStyle == 'roll') {
 		if (curatedLinesRolled.length == 0) { console.log('no rolled'); rollNames(curatedLines, true); }
@@ -66,7 +67,7 @@ function allocate(strStyle) {
 	//===================================================================================================
 	nStart = devoteeCounter;  nEnd = devoteeCounter + peopleForPoorvaangam; devoteeCounter = nEnd;
 	txtPoorvangam = assignShlokas(22, nStart, nEnd, curatedLines, 'Poorvangam');
-	strCsv = strCsv + '\n';
+	strCsv = strCsv + '\n'; 
 	
 	nStart = devoteeCounter;  nEnd = devoteeCounter + 1; devoteeCounter = nEnd;
 	txtNyasaa = fillDahses25("Nyasa: ") + curatedLines[nStart] + '\n';
@@ -89,14 +90,24 @@ function allocate(strStyle) {
 	txtEndingPrayer = 'Ending Prayer: ' + strEndingPrayerPerson + '\n';
 	strCsv = strCsv + 'Ending Prayer: ,,,,' + strEndingPrayerPerson + '\n';
 	
-	objallocation.value = txtOmNamo + txtDashes + txtBatchDate + txtDashes + txtPledgePrayer + txtPoorvangam + '\n' + txtNyasaa + '\n' + txtDhyaaanam + '\n' + txtShlokam + '\n' + txtPhalashruti + '\n' + txtEndingPrayer;
+	if(strStyle != 'shloka') {
+		objallocation.value = txtOmNamo + txtDashes + txtBatchDate + txtDashes + txtPledgePrayer + txtPoorvangam + '\n' + txtNyasaa + '\n' + txtDhyaaanam + '\n' + txtShlokam + '\n' + txtPhalashruti + '\n' + txtEndingPrayer;
+	} else {
+		devoteeCounter = 0;
+		nStart = devoteeCounter;
+		console.log(curatedLines.length);
+		nEnd = devoteeCounter + (curatedLines.length - 1);
+		console.log('me calling assign' + nStart + '--' + nEnd);
+		txtShlokam = assignShlokas(108, nStart, nEnd, curatedLines, 'Shlokam');
+		objallocation.value = txtOmNamo + txtDashes + txtBatchDate + txtDashes + txtShlokam + '\n';
+	}
 }
 
 function assignShlokas(nShlokas, nStart, nEnd, curatedLines, shlokamName) {
 	
 	var totalPeople = nEnd - nStart;
 	var perpersonShlokasDecimal = nShlokas / totalPeople
-	//console.log(totalPeople + ' ppl with ' + perpersonShlokasDecimal + ' each');
+	console.log(totalPeople + ' ppl with ' + perpersonShlokasDecimal + ' each');
 	
 	var startShloka = 1;
 	var text = '';
